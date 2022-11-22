@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 
 //task1
@@ -24,7 +25,11 @@ char* sameelements(char *s1, char *s2, int n)
     unsigned int len1 = strlen(s1);
     unsigned int len2 = strlen(s2);
     
-    char *result = malloc(len1 + len2 + 1);
+    if (len1 < n || len2 < n)
+    {
+        printf("ERROR");
+        return 0;
+    }
 
     for (int i = 0; i < n; ++i)
     {
@@ -36,9 +41,9 @@ char* sameelements(char *s1, char *s2, int n)
 
     if (n == count)
     {
-        printf('Correct');
+        printf("Correct");
     } else 
-        printf('Incorrect');
+        printf("Incorrect");
 }
 
 
