@@ -4,7 +4,6 @@
 int main()
 {
     //task 3
-
     int number;
     scanf("%d", &number);
 
@@ -58,8 +57,7 @@ int main()
 
 
     //task 5
-
-    int deposit, percent, month, result;
+    int deposit, percent, month, result = 0;
     scanf("%d %d %d", &deposit, &percent, &month);
     
     for (int i = 1; i < month + 1; ++i) 
