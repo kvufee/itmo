@@ -18,11 +18,27 @@ char* sumstrings(char *s1, char *s2)
 
 
 //task 4
-char* samestrings(char *s1, char *s2)
+char* sameelements(char *s1, char *s2, int n)
 {
+    int count = 0;
+    unsigned int len1 = strlen(s1);
+    unsigned int len2 = strlen(s2);
     
+    char *result = malloc(len1 + len2 + 1);
 
-    return result;
+    for (int i = 0; i < n; ++i)
+    {
+        if (s1[i] == s2[i])
+        {
+            count += 1;
+        }
+    }
+
+    if (n == count)
+    {
+        printf('Correct');
+    } else 
+        printf('Incorrect');
 }
 
 
