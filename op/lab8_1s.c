@@ -4,23 +4,25 @@
 
 int main()
 {
-    //task 1
+    //task 1//
+    puts("Task 1");
     char s1[100];
     char s2[100];
 
-    gets_s(s1, 100);
+    gets(s1, 100);
     char is1[100];
     memcpy(is1, s1, 100);
 
-    gets_s(s2, 100);
+    gets(s2, 100);
 
-    strcat(strcat(s1, " "), s2);
+    strcat(s1, s2);
     printf("%s \n \n", s1);
 
     memcpy(s1, is1, 100);
 
 
-    //task 4
+    //task 4//
+    puts("Task 4");
     int count = 0, amount;
     scanf("%d", &amount);
     unsigned int len1 = strlen(s1);
@@ -28,7 +30,7 @@ int main()
     
     if (len1 < amount || len2 < amount)
     {
-        printf("ERROR");
+        printf("ERROR\n");
         return 0;
     }
 
@@ -42,20 +44,48 @@ int main()
 
     if (amount == count)
     {
-        printf("Correct");
-    } else 
-        printf("Incorrect");
+        printf("Correct\n");
+    } else {
+        printf("Incorrect\n");
+    }
+    printf("\n");
 
 
-    //task 9
-    char *reqch = strrchr(s2, 'a');
+    //task 5//
+    puts("Task 5");
+    strcpy(s2, s1);
+    printf("%s \n", s2);
+    printf("\n");
+
+
+    //task 8//
+    puts("Task 8");
+    char *reqch = strrchr(s1, 'c');
 
     if (reqch == NULL)
     {
         printf("ERROR");
     } else {
-        printf("%d", reqch - s2 + 1);
+        printf("%ld", reqch - s1 + 1);
     }
+    printf("\n \n");
+
+    //task 11//
+    puts("Task 11");
+    char s3[100];
+    gets(s3, 100);
+    
+    char *istr;
+    
+    istr = strstr(s2, s3);
+
+    if (istr == NULL)
+    {
+        printf("ERROR");
+    } else {
+        printf("%ld", istr - s2 + 1);
+    }
+
 
     return 0;
 }
