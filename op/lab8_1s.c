@@ -70,6 +70,7 @@ int main()
     }
     printf("\n \n");
 
+
     //task 11//
     puts("Task 11");
     char *istr;
