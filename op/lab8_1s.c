@@ -72,18 +72,15 @@ int main()
 
     //task 11//
     puts("Task 11");
-    char s3[100];
-    gets(s3, 100);
-    
     char *istr;
     
-    istr = strstr(s2, s3);
+    istr = strstr(s1, s2);
 
     if (istr == NULL)
     {
         printf("ERROR");
     } else {
-        printf("%ld", istr - s2 + 1);
+        printf("%ld", istr - s1 + 1);
     }
 
 
