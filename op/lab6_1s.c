@@ -6,9 +6,8 @@ int main(void)
     int i;
     int arr[4] = {1000, 1001, 1002, 1003};
     
-    int *ptr1 = arr; //указатель на массив
+    int *ptr1 = arr;
     
-    //вывод элементов массива
     for (i = 0; i <=3; i++)
     { 
         printf("%d ", *ptr1++);
