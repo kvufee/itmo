@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 
@@ -9,7 +10,7 @@ int main()
     
     cin >> n;
 
-    if (!n) return cout << 0,0;
+    if (!n) cout << 0;
     
     vector <long long> vectr(n);
 
