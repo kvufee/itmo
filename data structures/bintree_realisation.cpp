@@ -5,7 +5,7 @@ class BST {
     struct Node
     {
         int key;
-        Node *left = nullptr, *right = nullptr;
+        Node *left = nullptr, *right = nullptr, *parent = nullptr;
         Node(int key): key(key) {}
     } *root = nullptr;
 
@@ -55,11 +55,15 @@ class BST {
     {
         if (root == nullptr) return;
 
-        if 
+        if (current->left || current->right)
+        {
+            
+        }
     }
 
 
-    void print(Node *current) const {
+    void print(Node *current) const
+    {
         if (current == nullptr)
             return;
         print(current->left);
@@ -107,6 +111,13 @@ int main()
                     long long key;
                     cin >> key;
                     bst.insert(key);
+                }
+            } else {
+                if (command == "delete")
+                {
+                    long long key;
+                    cin >> key;
+                    bst.del(key);
                 }
             }
     }
