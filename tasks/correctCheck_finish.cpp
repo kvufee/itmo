@@ -1,42 +1,76 @@
 #include <iostream>
 #include <vector>
-#include <climits>
-using namespace std;
+
+
+std::vector<int> left;
+std::vector<int> right;
+std::vector<int> parent;
+
+int minel = -10000000000;
+int maxel = 10000000000;
+int pos = 0;
+bool tree = true;
+
+
+void correct(int& i, int& min, int& max)
+{
+    if (parent[i] >= max || parent[i] <= min)
+    {
+        tree = false;
+    } else {
+        if (left[i] != -1)
+        {
+            if (parent[left[i]] >= parent[i]) 
+            {
+                tree = false;
+            }
+
+            correct(left[i], min, parent[i]);
+        }
+
+        if (right[i] != -1)
+        {
+            if (parent[right[i]] <= parent[i])
+            {
+                tree = false;
+            }
+
+            correct(right[i], parent[i], max);
+        }
+    }
+}
 
 
 int main()
 {
-    long long n;
-    cin >> n;
+    int n;
+    std::cin >> n;
 
-    if (!n) cout << "YES";
-
-    vector <long long> vectr(n);
-    min(n, -10000), max(n, 100000);
-
-    for (int i = 0; i < n; i++)
+    if (n == 1 || n == 0) 
     {
-        long long key, left, right;
-        cin >> key >> left >> right;
+        std::cout << "YES";
+    } else {
+        int current;
 
-        vectr[i] = key;
-        if (max[i] <= vectr[i] || min[i] >= vectr[i])
-            cout << "NO";
-        
-        if (left != 0)
+        for (int i = 0; i < n; ++i)
         {
-            max[left - 1] = ::min(max[i], key);
-            min[left - 1] = min[i];
+            std::cin >> current;
+            parent.push_back(current - 1);
+
+            std::cin >> current;
+            left.push_back(current - 1);
+
+            std::cin >> current;
+            right.push_back(current - 1);
         }
-        
-        if (right != 0)
+
+        correct(pos, minel, maxel);
+
+        if (!tree)
         {
-            min[right - 1] = ::max(min[i], key);
-            max[right - 1] = max[i];
+            std::cout << "NO";
+        } else {
+            std::cout << "YES";
         }
     }
-
-    cout << "YES" << "\n";
-
-    return 0;
 }
