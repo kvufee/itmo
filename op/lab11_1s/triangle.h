@@ -1,11 +1,10 @@
-#ifndef HEADER
-#define HEADER
-
+#ifndef TRIANGLE_H
+#define TRIANGLE_H
 
 struct rightTriangle
 {
-    float x1, y1;
-    float x2, y2;
+    double x1, y1;
+    double x2, y2;
 };
 
 double area(struct rightTriangle);
