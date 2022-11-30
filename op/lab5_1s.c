@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+
 int main()
 {
     int arr[3][3] = {77, 12, 74, 34, 56, 78, 234, 678};
@@ -20,8 +22,8 @@ int main()
             }
         }
     }
+
     printf("\n");
-    
     
     for (int i = 0; i < 2; i++)
     {

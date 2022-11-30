@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <locale.h>
+
 
 enum Lamps
 {
