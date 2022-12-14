@@ -15,25 +15,26 @@ void arrayOfDigits(int *arr, int n)
 }
 
 
-void extraSpaces(char *str, int n)
-{
-    for (int i = 0; i < n; ++i)
-    {
-        if(str[i])
-            {
-                str[i] = str[i+k];
-        
-                if(str[i] == ' ')
-                {
-                    k++;
-                    i--;
-                }
-
-                i++;
-
-                extraSpaces(str, n);
-            }
+char * delete_space(char *string, int length) {
+    char *new_string = malloc(sizeof(char) * length);
+    int index = 0;
+    for (int i = 0; i < length + 1; i++) {
+        if (string[i] == ' ' && string[i-1] == ' ') {
+            continue;
+        }
+        else if ((string[i-1] == '(' || string[i-1] == '{' || string[i-1] == '[' || string[i-1] == '"') && string[i] == ' ') {
+            continue;
+        }
+        else if (string[i-1] == '.' && string[i] == ' ') {
+            continue;
+        }
+        else {
+            new_string[index] = string[i];
+            index++;
+        }
     }
+    new_string[index] = '\0';
+    return new_string;
 }
 
 
