@@ -2,6 +2,7 @@
 
 static unsigned int k = 0;
 
+
 void arrayOfDigits(int *arr, int n)
 {
     int i = 0;
@@ -15,26 +16,31 @@ void arrayOfDigits(int *arr, int n)
 }
 
 
-char * delete_space(char *string, int length) {
-    char *new_string = malloc(sizeof(char) * length);
+char* deleteSpace(char *string, int length)
+{
+    char *str = malloc(sizeof(char) *length);
     int index = 0;
     for (int i = 0; i < length + 1; i++) {
-        if (string[i] == ' ' && string[i-1] == ' ') {
+        if (string[i] == ' ' && string[i-1] == ' ')
+        {
             continue;
         }
-        else if ((string[i-1] == '(' || string[i-1] == '{' || string[i-1] == '[' || string[i-1] == '"') && string[i] == ' ') {
+        else if ((string[i-1] == '(' || string[i-1] == '{' || string[i-1] == '[' || string[i-1] == '"') && string[i] == ' ')
+        {
             continue;
         }
-        else if (string[i-1] == '.' && string[i] == ' ') {
+        else if (string[i-1] == '.' && string[i] == ' ')
+        {
             continue;
         }
-        else {
-            new_string[index] = string[i];
+        else 
+        {
+            str[index] = string[i];
             index++;
         }
     }
-    new_string[index] = '\0';
-    return new_string;
+    str[index] = '\0';
+    return str;
 }
 
 
@@ -57,8 +63,5 @@ int main()
 
     puts("Task 5");
 
-    char str[100];
 
-
-    return 0;
 }
