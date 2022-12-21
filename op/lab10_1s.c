@@ -1,67 +1,40 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-static unsigned int k = 0;
 
-
-void arrayOfDigits(int *arr, int n)
+int sum(int num)
 {
-    int i = 0;
-    while (n > 0)
-    {
-        arr[i++] = n % 10;
-        n /= 10;
-        k++;
-    }
-    arr[i] = -1;
-}
+    if (num == 0) return 0;
 
-
-char* deleteSpace(char *string, int length)
-{
-    char *str = malloc(sizeof(char) *length);
-    int index = 0;
-    for (int i = 0; i < length + 1; i++) {
-        if (string[i] == ' ' && string[i-1] == ' ')
-        {
-            continue;
-        }
-        else if ((string[i-1] == '(' || string[i-1] == '{' || string[i-1] == '[' || string[i-1] == '"') && string[i] == ' ')
-        {
-            continue;
-        }
-        else if (string[i-1] == '.' && string[i] == ' ')
-        {
-            continue;
-        }
-        else 
-        {
-            str[index] = string[i];
-            index++;
-        }
-    }
-    str[index] = '\0';
-    return str;
+    return num%10 + sum(num/10);
 }
 
 
 int main()
 {
     puts("Task 3");
-
-    int arr[256];
-    int n;
-
-    scanf("%d", &n);
-
-    arrayOfDigits(arr, n);
-
-    for (int i = 0; i < n; ++i)
+    int number;
+    scanf("%d", &number);
+    int digits[10];
+    
+    for (int i = 9; i >= 0; i--)
     {
-        printf("%d", arr[i]);
+        digits[i] = number % 10;
+        number = number / 10;
     }
-       
+    
+    for (int i = 0; i < 10; ++i)
+    {
+        if (digits[i] != 0)
+            printf("%d ", digits[i]);
+    }
+    printf("\n");
 
-    puts("Task 5");
+    puts("Task 4");
+    int num;
+    scanf("%d", &number);
 
+    printf("%d", sum(number));
 
+    return 0;
 }
