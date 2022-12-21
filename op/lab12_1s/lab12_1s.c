@@ -1,27 +1,27 @@
 #include <stdio.h>
 #include <string.h>
  
-int main ()
+int main (int argc, char* argv[])
 {
-    FILE *file;
-    char file1[50], file2[100];
+    FILE *f1, *f2, *f3;
+    char file1[100], file2[100];
     int n, m;
- 
-    file = fopen("file1.txt", "r");
-    n = fread(file1, sizeof(char), 50, file);
-    fclose(file);
- 
-    file = fopen("file2.txt", "r");
-    m = fread(file2, sizeof(char), 50, file);
-    fclose(file);   
+
+    f1 = fopen(argv[1], "r");
+    n = fread(file1, sizeof(char), 100, f1);
+    fclose(f1);
+
+    f2 = fopen(argv[2], "r");
+    m = fread(file2, sizeof(char), 100, f2);
+    fclose(f2);   
  
     file1[n] = '\0';
     file2[m] = '\n';
     file2[m+1] = '\0';
  
-    file = fopen("file3.txt", "w");
+    f3 = fopen(argv[3], "w");
+    fwrite(strcat(file1, file2), sizeof(char), n + m, f3);   
+    fclose(f3);
 
-    fwrite(strcat(file1, file2), sizeof(char), n + m, file);
-           
-    fclose(file);   
+    return 0;
 }
