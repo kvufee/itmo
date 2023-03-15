@@ -7,7 +7,8 @@ int main()
 {
     int n, m, start, finish;
     cin >> n >> m;
-    vector <vector <int>> g(n + 1);
+
+    vector <vector <int>> adjList(n + 1);
     vector <int> lenght(n + 1, -1);
     queue <int> qq;
 
@@ -15,8 +16,8 @@ int main()
     {
         int first, second;
         cin >> first >> second;
-        g[first].push_back(second);
-        g[second].push_back(first);
+        adjList[first].push_back(second);
+        adjList[second].push_back(first);
     }
 
     cin >> start >> finish;
@@ -24,21 +25,20 @@ int main()
     lenght[start] = 0;
 
     qq.push(start);
-    while (qq.size() >= 1)
+
+    while (qq.size() != 0)
     {
         int vis = qq.front();
         qq.pop();
-        for (auto& curr : g[vis])
+
+        for (int i = 0; i < adjList[vis].size(); ++i)
         {
-            if (lenght[curr] == -1)
-            {
-                return cout << -1, 0;
-            }
-            else
-            {
-                lenght[curr] = lenght[vis] + 1;
-                qq.push(curr);
-            }
+            int curr = adjList[vis][i];
+
+            if (lenght[curr] != -1) continue;
+
+            lenght[curr] = lenght[vis] + 1;
+            qq.push(curr);
         }
     }
 
