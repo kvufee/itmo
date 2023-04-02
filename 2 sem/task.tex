@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx, xfrac, bigints}
+
+\title{LaTeX homework}
+
+\begin{document}
+
+\maketitle
+\Large
+
+Task 1:
+    \bigints_{0}^{\frac{\Pi}{2}} sin(x) \,dx \\
+
+    Use a table integral: \bigints_{}^{} sin(x) = (-cos(x)) \\
+
+    \bigints_{0}^{\frac{\Pi}{2}} sin(x) \,dx = (-cos(x)) \bigg|_0^{\frac{\Pi}{2}} = -cos({\frac{\Pi}{2}) - (-cos(0)) = 0 - (-1) = 1
+    
+    Task 2:
+    \bigints_{a}^{b} {\frac{dx}{x^2}} = \bigints_{a}^{b} {\frac{dx}{x^2}} \\
+    \delta x = {\frac{b - a}{n}} \\ 
+    \xi i = \sqrt{({\frac{b - a}{n}}i)({\frac{b - a}{n}}(i + 1))} \\
+
+    \sum_{i=0}^{n} {\frac{1}{a({\frac{b - a}{n}}i)({\frac{b - a}{n}}(i + 1))}} = {\frac{-n(n+1)}{a(a-b(n+1))}} \\
+
+    n + 1 = t
+
+    \sum_{i=0}^{n} {\frac{1}{a(a + t)} + {\frac{t}{(a + t)(a + 2t)} = {\frac{a - a + t}{a(a + t)} + {\frac{a + 2t - (a + t)}{(a + t)(a + 2t)} = {\frac{1}{a}} - {\frac{1}{a + t}} - {\frac{1}{a + 2t}}
+    
+
+\end{document}
