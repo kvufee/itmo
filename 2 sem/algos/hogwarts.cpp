@@ -2,32 +2,34 @@
 
 using namespace std;
 
-bool flag = false;
 
-
-void dfs(vector <vector <int>> &adjList, vector <int> &visList, int first, int comp)
+void dfs(vector <vector <int>> &adjList, vector <int> &visList, int first, int link_comp)
 {
-    visList[first] = comp;
+    visList[first] = link_comp;
 
     for (int i = 0; i < adjList[first].size(); ++i)
     {
-        if (visList[i] == false)
+        int vis = adjList[first][i];
+
+        if (!visList[vis])
         {
-            dfs(adjList, visList, first, comp);
+            dfs(adjList, visList, vis, link_comp);
         }
-    } 
+    }
 }
 
 
 int main()
 {
-    int n, m, comp = 0;
+    int n, m, link_comp = 0;
+    bool trap;
     cin >> n >> m;
 
     vector <vector <int>> adjList(n + 1);
     vector <int> visList(n + 1);
     vector <int> trapList(n + 1);
-    vector <bool> isTrap(comp + 1, 0);
+    vector <bool> isTrap(link_comp + 1, true);
+
 
     for (int i = 0; i < m; ++i)
     {
@@ -41,7 +43,7 @@ int main()
     {
         if (visList[i] == 0)
         {
-            dfs(adjList, visList, i, ++comp);
+            dfs(adjList, visList, i, ++link_comp);
         }
     }
 
@@ -52,13 +54,12 @@ int main()
     
     for (int i = 1; i <= n; ++i)
     {
-        if (trapList[i] == 0)
-        {
-            isTrap[visList[i]] = isTrap[visList[i]] && (1 - trapList[i]) == 1;
-        }
+        trap = 1 - trapList[i];
+        
+        isTrap[visList[i]] = trap && isTrap[visList[i]];
     }
 
-    cout << comp << "\n";
+    cout << link_comp << "\n";
 
     for (int i = 1; i <= n; ++i)
     {
@@ -67,11 +68,11 @@ int main()
 
     cout << "\n";
 
-    for (int i = 1; i <= comp; ++i)
+    for (int i = 1; i <= link_comp; ++i)
     {
-        cout << (1 - isTrap[i]) << " ";
+        trap = 1 - isTrap[i];
+        cout << trap << " ";
     }
 
     return 0;
 }
-    
