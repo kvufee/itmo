@@ -1,35 +1,32 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::vector;
 
 
-void dfs(vector <vector <int>> &adjList, vector <int> &visList, int first, int link_comp)
+void dfs(vector<vector<int>>& adjList, vector<int>& visList, int node, int component)
 {
-    visList[first] = link_comp;
-
-    for (int i = 0; i < adjList[first].size(); ++i)
+    visList[node] = component;
+    for (int neighbor : adjList[node])
     {
-        int vis = adjList[first][i];
-
-        if (!visList[vis])
+        if (visList[neighbor] == 0)
         {
-            dfs(adjList, visList, vis, link_comp);
+            dfs(adjList, visList, neighbor, component);
         }
     }
 }
 
-
-int main()
-{
-    int n, m, link_comp = 0;
-    bool trap;
+int main() {
+    int n, m;
     cin >> n >> m;
+    int component = 0;
 
-    vector <vector <int>> adjList(n + 1);
-    vector <int> visList(n + 1);
-    vector <int> trapList(n + 1);
-    vector <bool> isTrap(link_comp + 1, true);
-
+    vector<vector<int>> adjList(n + 1);
+    vector<int> visList(n + 1);
+    vector<int> traps(n + 1);
+    vector<bool> isTrap(n + 1, true);
 
     for (int i = 0; i < m; ++i)
     {
@@ -38,28 +35,22 @@ int main()
         adjList[first].push_back(second);
         adjList[second].push_back(first);
     }
-    
+
     for (int i = 1; i <= n; ++i)
     {
         if (visList[i] == 0)
         {
-            dfs(adjList, visList, i, ++link_comp);
+            dfs(adjList, visList, i, ++component);
         }
     }
 
     for (int i = 1; i <= n; ++i)
     {
-        cin >> trapList[i];
-    }
-    
-    for (int i = 1; i <= n; ++i)
-    {
-        trap = 1 - trapList[i];
-        
-        isTrap[visList[i]] = trap && isTrap[visList[i]];
+        cin >> traps[i];
+        isTrap[visList[i]] = !traps[i] && isTrap[visList[i]];
     }
 
-    cout << link_comp << "\n";
+    cout << component << "\n";
 
     for (int i = 1; i <= n; ++i)
     {
@@ -68,10 +59,9 @@ int main()
 
     cout << "\n";
 
-    for (int i = 1; i <= link_comp; ++i)
+    for (int i = 1; i <= component; ++i)
     {
-        trap = 1 - isTrap[i];
-        cout << trap << " ";
+        cout << !isTrap[i] << " ";
     }
 
     return 0;
