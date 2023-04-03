@@ -1,25 +1,28 @@
-def dfs(v, used, g, topsort):
-    used[v] = True
-    for now in g[v]:
-        if not used[now]:
-            dfs(now, used, g, topsort)
-    topsort.append(v)
+def dfs(adjList, visList, first, tSort):
+    visList[first] = True
+    for second in adjList[first]:
+        if not visList[second]:
+            dfs(adjList, visList, second, tSort)
+    tSort.append(first)
 
 n, m = map(int, input().split())
-g = [[] for _ in range(n+1)]
+
+adjList = [[] for i in range(n+1)]
+visList = [False] * (n + 1)
+tSort = []
+
 for i in range(m):
-    from_, to = map(int, input().split())
-    g[from_].append(to)
+    a, b = map(int, input().split())
+    adjList[a].append(b)
 
-used = [False] * (n+1)
-topsort = []
-for i in range(1, n+1):
-    if not used[i]:
-        dfs(i, used, g, topsort)
 
-reversed(topsort)
-ans = [0] * (n+1)
-for i in range(1, n+1):
-    ans[topsort[i-1]] = i
+for first in range(1, n + 1):
+    if not visList[first]:
+        dfs(adjList, visList, first, tSort)
 
-print(*ans[1:])
+new = {}
+for i, first in enumerate(reversed(tSort)):
+    new[first] = i + 1
+
+for first in range(1, n + 1):
+    print(new[first], end=' ')
