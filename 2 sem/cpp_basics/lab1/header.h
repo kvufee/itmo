@@ -5,8 +5,8 @@
 double round(double&);
 double round(double*);
 
-void negate(int&, int);
-void negate(int*, int);
+int negate(int&);
+int negate(int*);
  
 
 #endif 
