@@ -2,8 +2,8 @@
 #define FUNC_H_INCLUDED
  
 
-void round_first(double&);
-void round_second(double*);
+void round_first(float&);
+void round_second(float*);
 
 void negate_first(int&);
 void negate_second(int*);
