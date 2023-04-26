@@ -101,12 +101,14 @@ int main()
     moveSquareFirst(Square1, Vec1);
     moveSquareSecond(&Square2, &Vec2);
     
-    cout << Square1.x1 << " " << Square1.y1 << "\n" <<
+    cout << "square movement reference: " << "\n" << 
+            Square1.x1 << " " << Square1.y1 << "\n" <<
             Square1.x2 << " " << Square1.y2 << "\n" <<
             Square1.x3 << " " << Square1.y3 << "\n" <<
             Square1.x4 << " " << Square1.y4 << "\n";
 
-    cout << Square2.x1 << " " << Square2.y1 << "\n" <<
+    cout << "square movement pointer: " << "\n" << 
+            Square2.x1 << " " << Square2.y1 << "\n" <<
             Square2.x2 << " " << Square2.y2 << "\n" <<
             Square2.x3 << " " << Square2.y3 << "\n" <<
             Square2.x4 << " " << Square2.y4 << "\n";
