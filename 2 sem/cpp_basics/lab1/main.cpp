@@ -1,6 +1,7 @@
 #include "header.h"
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 using namespace std;
 
@@ -8,12 +9,12 @@ using namespace std;
 //round
 void roundFirst(float& value)
 {
-    trunc(value);
+    value = static_cast<int>(value);
 }
 
 void roundSecond(float* value)
 {
-    trunc(*value);
+    *value = static_cast<int>(*value);
 }   
 
 
@@ -58,6 +59,24 @@ void moveSquareSecond(square *Square, vec *Vec)
 
     Square->x4 += Vec->x;
     Square->y4 += Vec->y;
+}
+
+
+//multiply
+void mltpMatrixLinesFirst(vector<int> &mx, int num)
+{
+    for (int i = 0; i < 9; ++i)
+    {
+        mx[i] *= num;
+    }
+}
+
+void mltpMatrixLinesSecond(vector<int> *mx, int num)
+{
+    for (int i = 0; i < mx->size(); ++i)
+    {
+        (*mx)[i] *= num;
+    }
 }
 
 
@@ -115,9 +134,35 @@ int main()
             Square2.x3 << " " << Square2.y3 << "\n" <<
             Square2.x4 << " " << Square2.y4 << "\n";
 
+    ////////////////////////////////////////////////
 
-    
+    int num;
+    cin >> num;
+    vector<int> mx1;
+    vector<int> mx2;
 
+    for (int i = 0; i < 9; ++i)
+    {   
+        int a;
+        cin >> a;
+        mx1.push_back(a);
+        mx2.push_back(a);
+    }
+
+    mltpMatrixLinesFirst(mx1, num);
+    mltpMatrixLinesSecond(&mx2, num);
+
+    for (int i = 0; i < 9; ++i)
+    {
+        cout << mx1[i] << " ";
+    }
+
+    cout << "\n";
+
+    for (int i = 0; i < 9; ++i)
+    {
+        cout << mx2[i] << " ";
+    }
 
     return 0;
 }
