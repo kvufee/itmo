@@ -32,7 +32,7 @@ void negateSecond(int* value)
 //square moving
 void moveSquareFirst()
 {
-
+    
 }
 
 void moveSquareSecond()

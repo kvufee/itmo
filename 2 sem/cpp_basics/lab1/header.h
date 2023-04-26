@@ -8,6 +8,7 @@ void roundSecond(float*);
 void negateFirst(int&);
 void negateSecond(int*);
 
+
 struct square
 {
     int x1, y1;
@@ -21,8 +22,8 @@ struct vec
     int x, y;
 };
 
-void moveSquareFirst(square );
-void moveSquareSecond();
+void moveSquareFirst(square &Square, vec &Vec);
+void moveSquareSecond(square *Square, vec *Vec);
  
 
 #endif
