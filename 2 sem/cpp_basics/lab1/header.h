@@ -2,11 +2,11 @@
 #define FUNC_H_INCLUDED
  
 
-void round_first(float&);
-void round_second(float*);
+void roundFirst(float&);
+void roundSecond(float*);
 
-void negate_first(int&);
-void negate_second(int*);
+void negateFirst(int&);
+void negateSecond(int*);
 
 struct square
 {
@@ -15,6 +15,14 @@ struct square
     int x3, y3;
     int x4, y4;
 };
+
+struct vec
+{
+    int x, y;
+};
+
+void moveSquareFirst(square );
+void moveSquareSecond();
  
 
 #endif
