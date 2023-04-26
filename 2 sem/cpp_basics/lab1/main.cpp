@@ -50,14 +50,14 @@ void moveSquareSecond(square *Square, vec *Vec)
     Square->x1 += Vec->x;
     Square->y1 += Vec->y;
 
-    Square.x2 += Vec.x;
-    Square.y2 += Vec.y;
+    Square->x2 += Vec->x;
+    Square->y2 += Vec->y;
 
-    Square.x3 += Vec.x;
-    Square.y3 += Vec.y;
+    Square->x3 += Vec->x;
+    Square->y3 += Vec->y;
 
-    Square.x4 += Vec.x;
-    Square.y4 += Vec.y;
+    Square->x4 += Vec->x;
+    Square->y4 += Vec->y;
 }
 
 
