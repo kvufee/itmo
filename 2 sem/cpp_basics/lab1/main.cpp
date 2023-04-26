@@ -8,22 +8,22 @@ using namespace std;
 //round
 void roundFirst(float& value)
 {
-    round(value);
+    trunc(value);
 }
 
 void roundSecond(float* value)
 {
-    round(*value);
+    trunc(*value);
 }   
 
 
 //negate
-void negateFirst(int& value)
+void negateFirst(float& value)
 {
     value *= -1;
 }
 
-void negateSecond(int* value)
+void negateSecond(float* value)
 {
     *value *= -1;
 }
@@ -74,7 +74,7 @@ int main()
 
     ///////////////////////////////////////////////
 
-    int num_first, num_second;
+    float num_first, num_second;
     cin >> num_first >> num_second;
 
     negateFirst(num_first);

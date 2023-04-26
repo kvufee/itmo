@@ -5,8 +5,8 @@
 void roundFirst(float&);
 void roundSecond(float*);
 
-void negateFirst(int&);
-void negateSecond(int*);
+void negateFirst(float&);
+void negateSecond(float*);
 
 
 struct square
