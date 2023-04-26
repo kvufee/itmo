@@ -42,5 +42,18 @@ int main()
     cout << "round reference: " << value_first << "\n";
     cout << "round pointer: " << value_second << "\n";
 
+
+    int num_first, num_second;
+    cin >> num_first >> num_second;
+
+    negate_first(num_first);
+    negate_second(&num_second);
+
+    cout << "negate reference: " << num_first << "\n";
+    cout << "negate pointer: " << num_second << "\n";
+
+
+
+
     return 0;
 }
