@@ -30,14 +30,34 @@ void negateSecond(int* value)
 
 
 //square moving
-void moveSquareFirst()
+void moveSquareFirst(square &Square, vec &Vec)
 {
-    
+    Square.x1 += Vec.x;
+    Square.y1 += Vec.y;
+
+    Square.x2 += Vec.x;
+    Square.y2 += Vec.y;
+
+    Square.x3 += Vec.x;
+    Square.y3 += Vec.y;
+
+    Square.x4 += Vec.x;
+    Square.y4 += Vec.y;
 }
 
-void moveSquareSecond()
+void moveSquareSecond(square *Square, vec *Vec)
 {
-    
+    Square->x1 += Vec->x;
+    Square->y1 += Vec->y;
+
+    Square.x2 += Vec.x;
+    Square.y2 += Vec.y;
+
+    Square.x3 += Vec.x;
+    Square.y3 += Vec.y;
+
+    Square.x4 += Vec.x;
+    Square.y4 += Vec.y;
 }
 
 
@@ -63,6 +83,36 @@ int main()
     cout << "negate pointer: " << num_second << "\n";
 
 
+    square Square1, Square2;
+    vec Vec1, Vec2;
+
+    cin >> Square1.x1 >> Square1.y1 >>
+           Square1.x2 >> Square1.y2 >>
+           Square1.x3 >> Square1.y3 >>
+           Square1.x4 >> Square1.y4 >>
+           Vec1.x >> Vec1.y;
+    
+    cin >> Square2.x1 >> Square2.y1 >>
+           Square2.x2 >> Square2.y2 >>
+           Square2.x3 >> Square2.y3 >>
+           Square2.x4 >> Square2.y4 >>
+           Vec2.x >> Vec2.y;
+
+    moveSquareFirst(Square1, Vec1);
+    moveSquareSecond(&Square2, &Vec2);
+    
+    cout << Square1.x1 << " " << Square1.y1 << "\n" <<
+            Square1.x2 << " " << Square1.y2 << "\n" <<
+            Square1.x3 << " " << Square1.y3 << "\n" <<
+            Square1.x4 << " " << Square1.y4 << "\n";
+
+    cout << Square2.x1 << " " << Square2.y1 << "\n" <<
+            Square2.x2 << " " << Square2.y2 << "\n" <<
+            Square2.x3 << " " << Square2.y3 << "\n" <<
+            Square2.x4 << " " << Square2.y4 << "\n";
+
+
+    
 
 
     return 0;
