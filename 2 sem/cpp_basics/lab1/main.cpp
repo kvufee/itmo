@@ -72,6 +72,7 @@ int main()
     cout << "round reference: " << value_first << "\n";
     cout << "round pointer: " << value_second << "\n";
 
+    ///////////////////////////////////////////////
 
     int num_first, num_second;
     cin >> num_first >> num_second;
@@ -82,7 +83,8 @@ int main()
     cout << "negate reference: " << num_first << "\n";
     cout << "negate pointer: " << num_second << "\n";
 
-
+    ////////////////////////////////////////////////
+    
     square Square1, Square2;
     vec Vec1, Vec2;
 
