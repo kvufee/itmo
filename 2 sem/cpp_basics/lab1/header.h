@@ -1,9 +1,11 @@
 #ifndef FUNC_H_INCLUDED
 #define FUNC_H_INCLUDED
  
+#include <vector>
 
 void roundFirst(float&);
 void roundSecond(float*);
+
 
 void negateFirst(float&);
 void negateSecond(float*);
@@ -24,6 +26,10 @@ struct vec
 
 void moveSquareFirst(square &Square, vec &Vec);
 void moveSquareSecond(square *Square, vec *Vec);
- 
+
+
+void mltpMatrixLinesFirst(vector<int> &matrix, int a);
+void mltpMatrixLinesSecond(vector<int> *matrix, int a);
+
 
 #endif
