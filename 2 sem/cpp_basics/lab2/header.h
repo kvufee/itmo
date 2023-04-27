@@ -5,7 +5,6 @@
 class squarePoly
 {
     int a, b, c, x;
-    int min_point, max_point;
 
     public:
         squarePoly(int first, int second, int third, int value)
