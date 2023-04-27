@@ -47,7 +47,7 @@ void findRoots(squarePoly& debil, int root1, int root2)
 
 void findMinMax(squarePoly& debil)
 {
-    int min_value, max_value, discr;
+    int min_value, max_value, discr, vertex;
 
     discr = pow(debil.getB(), 2) - 4 * debil.getA() * debil.getC();
 
@@ -56,6 +56,21 @@ void findMinMax(squarePoly& debil)
         cout << "No min/max" << "\n";
     } else if (discr == 0)
     {
-        
+        vertex = -(debil.getB())/(2 * debil.getA());
+
+        min_value = vertex;
+
+        max_value = debil.getA() * pow(vertex, 2) + debil.getB() * vertex + debil.getC();
+
+        cout << "min: " << min_value << "\n" << "max: " << max_value << "\n";
     }
+}
+
+
+int main()
+{   
+
+
+    
+    return 0;
 }
