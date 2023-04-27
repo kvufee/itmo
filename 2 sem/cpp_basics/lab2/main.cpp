@@ -68,9 +68,7 @@ void findMinMax(squarePoly& debil)
 
 
 int main()
-{   
+{
 
-
-    
     return 0;
 }
