@@ -2,9 +2,11 @@
 
 class squarePoly
 {
-    int a, b, c, x;
 
     public:
+    
+        int a, b, c, x;
+        
         squarePoly (int first, int second, int third, int value)
         {
             a = first;
@@ -20,5 +22,6 @@ class squarePoly
             c = debil.c;
             x = debil.x;
         }
+
         
 };

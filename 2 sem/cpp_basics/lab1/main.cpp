@@ -1,7 +1,5 @@
 #include "header1.h"
-#include <iostream>
-#include <cmath>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -63,19 +61,41 @@ void moveSquareSecond(square *Square, vec *Vec)
 
 
 //multiply
-void mltpMatrixLinesFirst(vector<int> &mx, int num)
+void mltpMatrixLinesFirst(int mx[], int num)
 {
+
+    for (int i = 0; i < 9; ++i)
+    {
+        mx[i] *= num;
+    }   
+}
+
+void readMatrixFirst(int mx[])
+{
+    for (int i = 0; i < 9; ++i)
+    {   
+        cin >> mx[i];
+    }
+}
+
+void mltpMatrixLinesSecond(int *mx, int num)
+{
+    for (int i = 0; i < 9; ++i)
+    {   
+        cin >> mx[i];
+    }
+
     for (int i = 0; i < 9; ++i)
     {
         mx[i] *= num;
     }
 }
 
-void mltpMatrixLinesSecond(vector<int> *mx, int num)
+void readMatrixSecond(int mx[])
 {
-    for (int i = 0; i < mx->size(); ++i)
-    {
-        (*mx)[i] *= num;
+    for (int i = 0; i < 9; ++i)
+    {   
+        cin >> mx[i];
     }
 }
 
@@ -138,19 +158,14 @@ int main()
 
     int num;
     cin >> num;
-    vector<int> mx1;
-    vector<int> mx2;
+    int mx1[9];
+    int mx2[9];
 
-    for (int i = 0; i < 9; ++i)
-    {   
-        int a;
-        cin >> a;
-        mx1.push_back(a);
-        mx2.push_back(a);
-    }
+    readMatrixFirst(mx1);
+    readMatrixSecond(mx2);
 
     mltpMatrixLinesFirst(mx1, num);
-    mltpMatrixLinesSecond(&mx2, num);
+    mltpMatrixLinesSecond(mx2, num);
 
     for (int i = 0; i < 9; ++i)
     {
