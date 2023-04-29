@@ -1,6 +1,10 @@
 #ifndef FUNC_H_INCLUDED
 #define FUNC_H_INCLUDED
 
+struct Vec
+{
+    float x, y;
+};
 
 class triangle
 {
@@ -21,13 +25,9 @@ class triangle
         bool operator > (triangle& trg);
         triangle operator + (Vec& vec);
 
-        void heronSq(triangle& trg);
+        float heronSq(triangle& trg);
 };
 
-struct Vec
-{
-    float x, y;
-};
 
 
 #endif
