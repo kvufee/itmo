@@ -20,10 +20,5 @@ class squarePoly
             c = debil.c;
             x = debil.x;
         }
-
-        int getA() { return a; }
-        int getB() { return b; }
-        int getC() { return c; }
-        int getX() { return x; }
         
 };
