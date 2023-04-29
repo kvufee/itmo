@@ -5,6 +5,8 @@
 class squarePoly
 {
     public:
+        int a, b, c, x;
+
         squarePoly();
         
         squarePoly(int first, int second, int third, int value);
@@ -13,13 +15,7 @@ class squarePoly
         void rootAmount(squarePoly& debil);
         void findRoots(squarePoly& debil);
         void findMinMax(squarePoly& debil);
-
-        int getA();
-        int getB();
-        int getC();
-        int getX();
         
-        int a, b, c, x;
 };
 
 #endif
