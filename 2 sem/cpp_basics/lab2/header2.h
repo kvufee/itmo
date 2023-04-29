@@ -7,6 +7,8 @@ class squarePoly
     int a, b, c, x;
 
     public:
+        squarePoly();
+        
         squarePoly(int first, int second, int third, int value);
 
         void curPointValue(squarePoly& debil);
