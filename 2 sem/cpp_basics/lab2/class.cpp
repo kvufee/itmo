@@ -1,11 +1,11 @@
-#include "header.h"
+#include "header2.h"
 
 class squarePoly
 {
     int a, b, c, x;
 
     public:
-        squarePoly(int first, int second, int third, int value)
+        squarePoly (int first, int second, int third, int value)
         {
             a = first;
             b = second;
@@ -13,7 +13,7 @@ class squarePoly
             x = value;
         }
 
-        squarePoly(const squarePoly& debil)
+        squarePoly (const squarePoly& debil)
         {
             a = debil.a;
             b = debil.b;
