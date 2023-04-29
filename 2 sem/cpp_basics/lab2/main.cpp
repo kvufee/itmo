@@ -26,7 +26,7 @@ void squarePoly::curPointValue(squarePoly& debil)
 
 void squarePoly::rootAmount(squarePoly& debil)
 {
-    int discr, count;
+    int discr, count = 0;
     
     discr = pow(debil.b, 2) - 4 * debil.a * debil.c;
 
@@ -56,7 +56,7 @@ void squarePoly::findRoots(squarePoly& debil)
         root2 = (-debil.b - sqrt(discr)) / (2 * debil.a);
 
         cout << "x1: " << root1 << "\n" << "x2: " << root2 << "\n";
-    }
+    } else cout << "No roots" << "\n";
 }
 
 void squarePoly::findMinMax(squarePoly& debil)
@@ -65,10 +65,7 @@ void squarePoly::findMinMax(squarePoly& debil)
 
     discr = pow(debil.b, 2) - 4 * debil.a * debil.c;
 
-    if (discr < 0)
-    {
-        cout << "No min/max" << "\n";
-    } else if (discr == 0)
+    if (discr == 0 || discr > 0)
     {
         vertex = -(debil.b)/(2 * debil.a);
 
@@ -77,6 +74,10 @@ void squarePoly::findMinMax(squarePoly& debil)
         max_value = debil.a * pow(vertex, 2) + debil.b * vertex + debil.c;
 
         cout << "min: " << min_value << "\n" << "max: " << max_value << "\n";
+    }
+    else if (discr < 0)
+    {
+        cout << "No min/max" << "\n";
     }
 }
 
