@@ -33,9 +33,9 @@ void squarePoly::rootAmount(squarePoly& debil)
     if (discr == 0 || discr > 0)
     {
         count = 2;
-
-        cout << "amount of roots: " << count << "\n";
     }
+
+    cout << "amount of roots: " << count << "\n";
 }
 
 void squarePoly::findRoots(squarePoly& debil)
