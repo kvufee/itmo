@@ -84,7 +84,6 @@ void squarePoly::findMinMax(squarePoly& debil)
 
 int main()
 {
-    int cur;
     squarePoly SP;
 
     cin >> SP.a >> SP.b >> SP.c >> SP.x;
