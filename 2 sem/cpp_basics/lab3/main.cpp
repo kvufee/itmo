@@ -4,7 +4,23 @@
 using namespace std;
 
 
-float Triangle::heronSq(Triangle& trg)
+struct Vec
+{
+    float x, y;
+};
+
+triangle::triangle()
+{
+    float x1 = 0, y1 = 0;
+    float x2 = 0, y2 = 0;
+    float x3 = 0, y3 = 0;
+}
+
+triangle::triangle(float x1, float y1, float x2, float y2, float x3, float y3) : 
+                   x1(x1), y1(y1), x2(x2), y2(y2), x3(x3), y3(y3) {}
+
+
+void triangle::heronSq(triangle& trg)
 {
     float square;
 
@@ -17,10 +33,27 @@ float Triangle::heronSq(Triangle& trg)
     perimeter = a + b + c;
 
     square = sqrt((perimeter/2) * ((perimeter/2) - a) * ((perimeter/2) - b) * ((perimeter/2) * c));
+
+    cout << square;
 }
 
 
 int main()
 {
+    triangle trg1;
+    triangle trg2;
+
+    cout << "triangle 1: ";
+    cin >> trg1.x1 >> trg1.y1 >> trg1.x2 >> trg1.y2 >> trg1.x3 >> trg1.y3;
+    trg1.heronSq(trg1);
     
+    cout << "triangle 2: ";
+    cin >> trg2.x1 >> trg2.y1 >> trg2.x2 >> trg2.y2 >> trg2.x3 >> trg2.y3;
+    trg2.heronSq(trg2);
+
+    cout << "\n";
+
+    
+
+    return 0;
 }
