@@ -4,8 +4,6 @@
 
 class squarePoly
 {
-    int a, b, c, x;
-
     public:
         squarePoly();
         
@@ -21,6 +19,7 @@ class squarePoly
         int getC();
         int getX();
         
+        int a, b, c, x;
 };
 
 #endif
