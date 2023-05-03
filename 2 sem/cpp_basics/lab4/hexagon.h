@@ -9,38 +9,37 @@
 
 class hexagon : public BaseCObject, public IDialogInitiable, public IGeoFig, public IPhysObject, public IPrintable
 {
-    public:
-        hexagon();
+public:
+    hexagon();
 
-        hexagon(const char* fig_name, unsigned int figure_size, double fig_square, double fig_perimeter, double fig_mass);
+    hexagon(const char* fig_name, unsigned int figure_size, double fig_square, double fig_perimeter, double fig_mass);
+
+    //BaseCObject
+    const char* classname() override;
+    unsigned int size() override;
+
+    //IDialogInitiable
+    void InitFromDialog() override;
+
+    //IGeoFig
+    double square() override;
+    double perimeter() override;
+
+    //IPhysObject
+    double mass() override;
+    bool operator== (IPhysObject& ob) override;
+    bool operator< (IPhysObject& ob) override;
+
+    //IPrintable
+    void draw() override;
 
 
-        //BaseCObject
-        const char* classname() override;
-        unsigned int size() override;
+private:
+    char str[100];
+    const char* fig_name;
+    unsigned int fig_size;
 
-        //IDialogInitiable
-        void InitFromDialog() override;
+    double fig_square, fig_perimeter;
 
-        //IGeoFig
-        double square() override;
-        double perimeter() override;
-
-        //IPhysObject
-        double mass() override;
-        bool operator== (const IPhysObject& ob);
-        bool operator< (const IPhysObject& ob);
-
-        //IPrintable
-        void draw() override;
-
-
-    private:
-        char str[100];
-        const char* fig_name;
-        unsigned int fig_size;
-
-        double fig_square, fig_perimeter;
-
-        double fig_mass;
+    double fig_mass;
 };
