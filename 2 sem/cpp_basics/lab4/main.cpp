@@ -11,7 +11,7 @@ hexagon::hexagon(const char* fig_name,
                  unsigned int fig_size,
                  double fig_square,
                  double fig_perimeter,
-                 double fig_mass) : fig_name(fig_name),
+                 double fig_mass):  fig_name(fig_name),
                                     fig_size(fig_size),
                                     fig_square(fig_square),
                                     fig_perimeter(fig_perimeter),
@@ -21,7 +21,5 @@ hexagon::hexagon(const char* fig_name,
 
 int main()
 {
-    hexagon hexagon;
-
     return 0;
 }
