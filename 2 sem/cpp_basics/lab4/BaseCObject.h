@@ -1,13 +1,14 @@
-#ifndef FUNC_H_INCLUDED
-#define FUNC_H_INCLUDED
+#pragma once
 
 
 class BaseCObject
 {
     public:
+        char str[100];
+
+        const char* fig_name = str;
+        unsigned int fig_size;
+        
         virtual const char* classname() = 0;
         virtual unsigned int size() = 0;
 };
-
-
-#endif

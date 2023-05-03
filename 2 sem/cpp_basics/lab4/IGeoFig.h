@@ -1,5 +1,4 @@
-#ifndef FUNC_H_INCLUDED
-#define FUNC_H_INCLUDED
+#pragma once
 
 
 class IGeoFig
@@ -8,6 +7,3 @@ class IGeoFig
         virtual double square() = 0;
         virtual double perimeter() = 0;
 };
-
-
-#endif
