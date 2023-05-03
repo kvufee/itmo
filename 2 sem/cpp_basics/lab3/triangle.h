@@ -19,11 +19,11 @@ class triangle
 
         float perimeter;
 
-        bool operator == (triangle& trg);
-        bool operator != (triangle& trg);
-        bool operator < (triangle& trg);
-        bool operator > (triangle& trg);
-        triangle operator + (Vec& vec);
+        bool operator== (triangle& trg);
+        bool operator!= (triangle& trg);
+        bool operator< (triangle& trg);
+        bool operator> (triangle& trg);
+        triangle operator+ (Vec& vec);
 
         float heronSq(triangle& trg);
 };
