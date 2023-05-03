@@ -1,75 +1,47 @@
-#include "BaseCObject.h"
-#include "IDialogInitiable.h"
-#include "IGeoFig.h"
-#include "IPhysObject.h"
-#include "IPrintable.h"
+#include "hexagon.h"
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
 
-class BaseCObject
+//BaseCObject
+const char* hexagon::classname()
 {
-    public:
-        virtual const char* classname();
-        virtual unsigned int size();
-};
-
-class IDialogInitiable
+    cin.getline(str, 100);
+    fig_name = str;
+}
+unsigned int hexagon::size()
 {
-    public:
+    cin >> fig_size;
+}
 
-};
+//IDialogInitiable
+void hexagon::InitFromDialog() {}
 
-class IGeoFig
+//IGeoFig
+double hexagon::square()
 {
-    public:
-        int square, perimeter;
-
-        double square()
-        {
-            cin >> square;
-        }
-
-        double perimeter()
-        {
-            cin >> perimeter;
-        }
-
-};
-
-class IPhysObject
+    cin >> fig_square;
+}
+double hexagon::perimeter()
 {
-    public:
-        double mass;
+    cin >> fig_perimeter;
+}
 
-        double mass()
-        {
-            cin >> mass;
-        }
-
-
-};
-
-class IPrintable
+//IPhysObject
+double hexagon::mass()
 {
-    public:
-
-};
-
-class hexagon : public BaseCObject, public IDialogInitiable, public IGeoFig, public IPhysObject, public IPrintable
+    cin >> fig_mass;
+}
+bool hexagon::operator== (const IPhysObject& ob)
 {
-    public:
-        const char* classname() override
-        {
+    //ТУТ КАРОЧИ СРАВНИ ДВЕ ШТУКИ
+}
+bool hexagon::operator< (const IPhysObject& ob)
+{
+    //ТУТ КАРОЧИ СРАВНИ ДВЕ ШТУКИ
+}
 
-        }
-
-        unsigned int size() override
-        {
-            
-        }
-
-
-};
+//IPrintable
+void hexagon::draw() {}
