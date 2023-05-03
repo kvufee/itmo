@@ -2,9 +2,10 @@
 #define FUNC_H_INCLUDED
 
 
-class IDialogInitable
+class IDialogInitiable
 {
-    virtual void InitFromDialog() = 0;
+    public:
+        virtual void InitFromDialog() = 0;
 };
 
 
