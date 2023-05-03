@@ -34,13 +34,13 @@ double hexagon::mass()
 {
     cin >> fig_mass;
 }
-bool hexagon::operator== (const IPhysObject& ob)
+bool hexagon::operator== (IPhysObject& ob)
 {
-    //ТУТ КАРОЧИ СРАВНИ ДВЕ ШТУКИ
+    return mass() == ob.mass();
 }
-bool hexagon::operator< (const IPhysObject& ob)
+bool hexagon::operator< (IPhysObject& ob)
 {
-    //ТУТ КАРОЧИ СРАВНИ ДВЕ ШТУКИ
+    return mass() < ob.mass();
 }
 
 //IPrintable
