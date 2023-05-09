@@ -14,13 +14,14 @@ bool bfs(vector<vector<int>>& adjList, vector<int>& parList, int n)
 
     while (qq.empty() == false)
     {
+        int vis = qq.front();
         qq.pop();
 
         for (int i = 0; i <= n; ++i)
         {
-            if (usedList[i] == false && adjList[qq.front()][i] > 0)
+            if (usedList[i] == false && adjList[vis][i] > 0)
             {
-                parList[i] = qq.front();
+                parList[i] = vis;
 
                 if (i == n)
                 {
@@ -29,18 +30,17 @@ bool bfs(vector<vector<int>>& adjList, vector<int>& parList, int n)
 
                 qq.push(i);
 
-                usedList[qq.front()] = true;
+                usedList[vis] = true;
             }
         }
     }
-
     return false;
 }
 
 
 int main()
 {
-    int n, m, k = 1e9, res = 0;
+    int n, m, res = 0;
     cin >> n >> m;
 
     vector<vector<int>> adjList(n + 1, vector<int>(n + 1));
@@ -58,17 +58,19 @@ int main()
 
     while (bfs(adjList, parList, n) == true)
     {
-        for (int i = n; i != 1; i = parList[i])
+        int k = INT_MAX;
+        
+        for (int v = n; v != 1; v = parList[v])
         {
-            int j = parList[i];
-            k = min(k, adjList[j][i]);
+            int u = parList[v];
+            k = min(k, adjList[u][v]);
         }
 
-        for (int i = n; i != 1; i = parList[i])
+        for (int v = n; v != 1; v = parList[v])
         {
-            int j = parList[i];
-            adjList[j][i] -= k;
-            adjList[i][j] += k;
+            int u = parList[v];
+            adjList[u][v] -= k;
+            adjList[v][u] += k;
         }
         res += k;
     }
