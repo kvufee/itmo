@@ -40,10 +40,8 @@ bool bfs(vector<vector<int>>& adjList, vector<int>& parList, int n)
 
 int main()
 {
-    int n, m, res = 0;
+    int n, m, k = 1e9, res = 0;
     cin >> n >> m;
-
-    bool flag = false;
 
     vector<vector<int>> adjList(n + 1, vector<int>(n + 1));
     vector<int> visList(n + 1);
@@ -58,6 +56,24 @@ int main()
         adjList[first][second] = weight;
     }
 
+    while (bfs(adjList, parList, n) == true)
+    {
+        for (int i = n; i != 1; i = parList[i])
+        {
+            int j = parList[i];
+            k = min(k, adjList[j][i]);
+        }
+
+        for (int i = n; i != 1; i = parList[i])
+        {
+            int j = parList[i];
+            adjList[j][i] -= k;
+            adjList[i][j] += k;
+        }
+        res += k;
+    }
+
+    cout << res;
 
     return 0;
 }
