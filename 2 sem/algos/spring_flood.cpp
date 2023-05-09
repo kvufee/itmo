@@ -3,6 +3,11 @@
 using namespace std;
 
 
+bool operator<(tuple<int, int, int>& tup1, tuple<int, int, int>& tup2)
+{
+    return get<2>(tup1) < get<2>(tup2);
+}
+
 int findParent(vector<int>& visList, int first)
 {
     if (visList[first] == first)
