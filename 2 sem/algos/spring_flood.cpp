@@ -5,17 +5,12 @@ using namespace std;
 
 int findParent(vector<int>& visList, int first)
 {
-    int result = 0;
-
     if (visList[first] == first)
     {
         return first;
     }
     
-    visList[first] = findParent(visList, visList[first]);
-    result = visList[first];
-
-    return result;
+    return visList[first] = findParent(visList, visList[first]);
 }
 
 void merge(vector<int>& visList, vector<int>& priorList, int first, int second)
@@ -49,7 +44,7 @@ int main()
 
     vector<tuple<int, int, int>> graph(m);
     vector<int> visList(n + 1);
-    vector<int> priorList(n+1);
+    vector<int> priorList(n + 1);
     
     for (int i = 0; i <= n; ++i)
     {
@@ -73,10 +68,17 @@ int main()
         int second = get<1>(graph[i]);
         int weight = get<2>(graph[i]);
 
+        if (findParent(visList, first) == findParent(visList, second))
+        {
+            continue;
+        }
 
+        merge(visList, priorList, first, second);
+
+        result += weight;
     }
 
-
+    cout << result;
 
     return 0;
 }
