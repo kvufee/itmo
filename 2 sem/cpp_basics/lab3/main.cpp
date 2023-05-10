@@ -1,4 +1,5 @@
 #include "triangle.h"
+#include "queue.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -37,8 +38,29 @@ int main()
 
     /////////////////////////////////////////
 
-    
+    int element, req_amount;
+    cin >> req_amount;
 
+    qq qq;
+
+    for(size_t i = 0; i < req_amount; ++i)
+    {
+        string command;
+        cin >> command;
+
+        if(command == "add")
+        {
+            cin >> element;
+            qq << element;
+        }
+
+        if(command == "del")
+        {
+            int val;
+            qq >> val;
+            cout << val << "\n";
+        }
+    }
 
     return 0;
 }
