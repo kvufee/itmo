@@ -44,13 +44,15 @@ void merge(vector<int>& visList, vector<int>& priorList, int first, int second)
 
 int main()
 {
-    int n, m, result1 = 0, result2 = INT_MAX;
+    int n, m, result = 0;
+    int temp = INT_MAX;
     cin >> n >> m;
 
     vector<tuple<int, int, int>> graph(m);
-    vector<int> edgeList(n + 1);
+    vector<vector<int>> adjList(n + 1, vector<int>(n + 1));
     vector<int> visList(n + 1);
     vector<int> priorList(n + 1);
+    vector<int> edgeValues(n + 1);
     
     for (int i = 0; i <= n; ++i)
     {
@@ -64,6 +66,9 @@ int main()
         cin >> first >> second >> weight;
 
         graph[i] = make_tuple(first, second, weight);
+
+        adjList[get<0>(graph[i])][get<1>(graph[i])] = get<2>(graph[i]);
+        adjList[get<1>(graph[i])][get<0>(graph[i])] = get<2>(graph[i]);
     }
 
     sort(graph.begin(), graph.end());
@@ -79,9 +84,12 @@ int main()
             continue;
         }
 
+        edgeValues[first] = max(edgeValues[first], weight);
+        edgeValues[second] = max(edgeValues[second], weight);
+
         merge(visList, priorList, first, second);
 
-        result1 += weight;
+        result += weight;
     }
 
     for (int i = 0; i <= n; ++i)
@@ -90,21 +98,23 @@ int main()
         int second = get<1>(graph[i]);
         int weight = get<2>(graph[i]);
 
-        int edge_value = edgeList[i];
+        int value = edgeValues[i];
         int difference = INT_MAX;
 
         for (int j = 0; j < m; ++j)
         {
-            if ((first, second) != i || weight <= edge_value)
+            if (first != i && second != i || weight <= value)
             {
                 continue;
             }
 
-            difference = min(difference, weight - edge_value);
+            difference = min(difference, weight - value);
         }
 
-        result2 = min(result2, difference);
+        temp = min(temp, difference);
     }
+
+    cout << result << " " << result + temp;
 
     return 0;
 }
