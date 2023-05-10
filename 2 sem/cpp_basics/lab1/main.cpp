@@ -1,5 +1,4 @@
 #include "header1.h"
-#include "func.cpp"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -61,28 +60,12 @@ int main()
 
     ////////////////////////////////////////////////
 
-    int num;
-    cin >> num;
-    int mx1[9];
-    int mx2[9];
+    int a, b;
+    replaceFirst(&a,&b);
+    std::cout << "replace pointer: " << a  << " " << b << "\n";
 
-    readMatrixFirst(mx1);
-    readMatrixSecond(mx2);
-
-    mltpMatrixLinesFirst(mx1, num);
-    mltpMatrixLinesSecond(mx2, num);
-
-    for (int i = 0; i < 9; ++i)
-    {
-        cout << mx1[i] << " ";
-    }
-
-    cout << "\n";
-
-    for (int i = 0; i < 9; ++i)
-    {
-        cout << mx2[i] << " ";
-    }
+    replaceSecond(a,b);
+    std::cout << "replace reference: " << a << " " << b << "\n";
 
     return 0;
 }
