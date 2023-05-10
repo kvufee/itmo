@@ -1,5 +1,4 @@
 #include "triangle.h"
-#include "triangle.cpp"
 #include <bits/stdc++.h>
 
 using namespace std;

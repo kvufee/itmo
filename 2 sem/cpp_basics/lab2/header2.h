@@ -1,5 +1,4 @@
-#ifndef FUNC_H_INCLUDED
-#define FUNC_H_INCLUDED
+#pragma once
 
 
 class squarePoly
@@ -17,5 +16,3 @@ class squarePoly
         void findMinMax(squarePoly& debil);
         
 };
-
-#endif
