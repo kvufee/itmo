@@ -59,42 +59,16 @@ void moveSquareSecond(square *Square, vec *Vec)
     Square->y4 += Vec->y;
 }
 
-
-//multiply
-void mltpMatrixLinesFirst(int mx[], int num)
+void replaceFirst(int *a, int *b)
 {
-
-    for (int i = 0; i < 9; ++i)
-    {
-        mx[i] *= num;
-    }   
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
-void readMatrixFirst(int mx[])
+void replaceSecond(int &a, int &b)
 {
-    for (int i = 0; i < 9; ++i)
-    {   
-        cin >> mx[i];
-    }
-}
-
-void mltpMatrixLinesSecond(int *mx, int num)
-{
-    for (int i = 0; i < 9; ++i)
-    {   
-        cin >> mx[i];
-    }
-
-    for (int i = 0; i < 9; ++i)
-    {
-        mx[i] *= num;
-    }
-}
-
-void readMatrixSecond(int mx[])
-{
-    for (int i = 0; i < 9; ++i)
-    {   
-        cin >> mx[i];
-    }
+    int temp = a;
+    a = b;
+    b = temp;
 }

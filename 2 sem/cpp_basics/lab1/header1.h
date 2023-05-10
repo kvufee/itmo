@@ -1,6 +1,4 @@
-#ifndef FUNC_H_INCLUDED
-#define FUNC_H_INCLUDED
-
+#pragma once
 
 void roundFirst(float&);
 void roundSecond(float*);
@@ -27,8 +25,5 @@ void moveSquareFirst(square &Square, vec &Vec);
 void moveSquareSecond(square *Square, vec *Vec);
 
 
-void mltpMatrixLinesFirst(int matrix[], int a);
-void mltpMatrixLinesSecond(int *matrix, int a);
-
-
-#endif
+void replaceFirst(int *a, int *b);
+void replaceSecond(int &a, int &b);
