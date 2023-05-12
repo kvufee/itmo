@@ -21,5 +21,15 @@ hexagon::hexagon(const char* fig_name,
 
 int main()
 {
+    hexagon hxgn;
+
+    cout << "hexagon: " << "\n";
+
+    hxgn.classname();
+    hxgn.perimeter();
+    hxgn.square();
+    hxgn.mass();
+    hxgn.size();
+
     return 0;
 }
