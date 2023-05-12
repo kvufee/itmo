@@ -35,8 +35,8 @@ public:
 
 
 private:
-    char str[100];
     const char* fig_name;
+
     unsigned int fig_size;
 
     double fig_square, fig_perimeter;
