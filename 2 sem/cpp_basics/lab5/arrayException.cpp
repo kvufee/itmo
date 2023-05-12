@@ -44,7 +44,7 @@ template <typename T, int N>
 T findMax(T arr[N])
 {
     T ans = 0;
-    for (int i : arr)
+    for (int i = 0; i < N; ++i)
     {
         if (arr[i] > ans)
         {
