@@ -30,9 +30,18 @@ public:
     }
 };
 
+class negativeSizeOfArray : public exception
+{
+public:
+    const char* error() const throw()
+    {
+        return "Size of array should be more than 0";
+    }
+};
 
-template <typename T, int n>
-T findMax(T arr[n])
+
+template <typename T, int N>
+T findMax(T arr[N])
 {
     T ans = 0;
     for (int i : arr)
