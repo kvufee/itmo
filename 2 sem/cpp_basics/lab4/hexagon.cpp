@@ -8,6 +8,7 @@ using namespace std;
 //BaseCObject
 const char* hexagon::classname()
 {
+    char* str;
     cin.getline(str, 100);
     fig_name = str;
 }
@@ -44,4 +45,11 @@ bool hexagon::operator< (IPhysObject& ob)
 }
 
 //IPrintable
-void hexagon::draw() {}
+void hexagon::draw()
+{
+    cout << fig_name << "\n"
+         << fig_perimeter << "\n"
+         << fig_square << "\n"
+         << fig_size << "\n"
+         << fig_mass << "\n";
+}
