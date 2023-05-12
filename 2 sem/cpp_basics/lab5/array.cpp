@@ -40,7 +40,7 @@ public:
         ++count;
     }
 
-    void del()
+    T del()
     {
         if (index == -1)
         {
@@ -52,7 +52,7 @@ public:
         return arr[index + 1];
     }
 
-    void sortArr()
+    T sortArr()
     {
         if (index == -1)
         {
