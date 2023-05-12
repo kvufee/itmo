@@ -1,19 +1,70 @@
+#include "arrayException.cpp"
+
 #include <bits/stdc++.h>
 
 using namespace std;
 
 
-template <class T, int n>
-T findMax(T arr[n])
+template <class T, int N>
+class Array
 {
-    T ans = 0;
-    for (int i : arr)
+public:
+    Array()
     {
-       if (arr[i] > ans)
-       {
-           ans = arr[i];
-       }
+        if (N < 0)
+        {
+            throw negativeSizeOfArray();
+        }
+
+        n = N;
+        arr = new T[n];
+        index = -1;
+        count = 0;
     }
 
-    return ans;
-}
+    ~Array()
+    {
+        delete[] arr;
+    }
+
+    void add(T a)
+    {
+        if (count > N)
+        {
+            throw arrayOverflow();
+        }
+
+        ++index;
+        arr[index] = a;
+
+        ++count;
+    }
+
+    void del()
+    {
+        if (index == -1)
+        {
+            throw arrayIsEmpty();
+        }
+
+        --index;
+
+        return arr[index + 1];
+    }
+
+    void sortArr()
+    {
+        if (index == -1)
+        {
+            throw arrayIsEmpty();
+        }
+
+        return sort(arr.begin(), arr.end());
+    }
+
+private:
+    T arr;
+    int count;
+    int n;
+    int index;
+};
