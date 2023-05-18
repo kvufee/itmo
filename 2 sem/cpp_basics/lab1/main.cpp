@@ -61,11 +61,14 @@ int main()
     ////////////////////////////////////////////////
 
     int a, b;
+
+    cin >> a >> b;
+
     replaceFirst(&a,&b);
-    std::cout << "replace pointer: " << a  << " " << b << "\n";
+    cout << "replace pointer: " << a  << " " << b << "\n";
 
     replaceSecond(a,b);
-    std::cout << "replace reference: " << a << " " << b << "\n";
+    cout << "replace reference: " << a << " " << b << "\n";
 
     return 0;
 }
