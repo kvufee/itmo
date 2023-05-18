@@ -18,8 +18,6 @@ triangle::triangle(float x1, float y1, float x2, float y2, float x3, float y3) :
 
 float triangle::heronSq(triangle& trg)
 {
-    float square;
-
     float a, b, c;
 
     a = pow((trg.x1 - trg.x2), 2) + pow((trg.y1 - trg.y2), 2);
@@ -46,4 +44,10 @@ float triangle::perimCount(triangle &trg)
     perimeter = a + b + c;
 
     return perimeter;
+}
+
+
+bool operator== (const triangle& trg1, const triangle& trg2)
+{
+    return trg1.square == trg2.square;
 }
