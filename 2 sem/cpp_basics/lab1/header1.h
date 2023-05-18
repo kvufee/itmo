@@ -1,11 +1,11 @@
 #pragma once
 
-void roundFirst(float&);
-void roundSecond(float*);
+void roundFirst(float &a);
+void roundSecond(float *a);
 
 
-void negateFirst(float&);
-void negateSecond(float*);
+void negateFirst(float &a);
+void negateSecond(float *a);
 
 
 struct square
