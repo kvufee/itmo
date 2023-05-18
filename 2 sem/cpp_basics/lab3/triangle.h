@@ -25,6 +25,8 @@ class triangle
         triangle operator+ (Vec& vec);
 
         float heronSq(triangle& trg);
+
+        float perimCount(triangle& trg);
 };
 
 
