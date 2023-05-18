@@ -51,3 +51,18 @@ bool operator== (const triangle& trg1, const triangle& trg2)
 {
     return trg1.square == trg2.square;
 }
+
+bool operator!= (const triangle& trg1, const triangle& trg2)
+{
+    return trg1.square != trg2.square;
+}
+
+bool operator< (const triangle& trg1, const triangle& trg2)
+{
+    return trg1.square < trg2.square;
+}
+
+bool operator> (const triangle& trg1, const triangle& trg2)
+{
+    return trg1.square > trg2.square;
+}
