@@ -16,13 +16,13 @@ class triangle
         float x2, y2;
         float x3, y3;
 
-        float perimeter;
+        float perimeter, square;
 
-        bool operator== (triangle& trg);
-        bool operator!= (triangle& trg);
-        bool operator< (triangle& trg);
-        bool operator> (triangle& trg);
-        triangle operator+ (Vec& vec);
+        bool operator== (const triangle& trg1);
+        bool operator!= (const triangle& trg);
+        bool operator< (const triangle& trg);
+        bool operator> (const triangle& trg);
+        triangle operator+ (const Vec& vec);
 
         float heronSq(triangle& trg);
 
