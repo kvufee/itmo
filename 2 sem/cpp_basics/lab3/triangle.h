@@ -7,26 +7,25 @@ struct Vec
 
 class triangle
 {
-    public:
-        triangle();
+public:
+    triangle();
 
-        triangle(float x1, float y1, float x2, float y2, float x3, float y3);
+    triangle(float x1, float y1, float x2, float y2, float x3, float y3, float perimeter, float square);
 
-        float x1, y1;
-        float x2, y2;
-        float x3, y3;
+    bool operator== (const triangle& trg);
+    bool operator!= (const triangle& trg);
+    bool operator< (const triangle& trg);
+    bool operator> (const triangle& trg);
 
-        float perimeter, square;
+    float heronSq(triangle& trg);
 
-        bool operator== (const triangle& trg1);
-        bool operator!= (const triangle& trg);
-        bool operator< (const triangle& trg);
-        bool operator> (const triangle& trg);
-        triangle operator+ (const Vec& vec);
+    float perimCount(triangle& trg);
 
-        float heronSq(triangle& trg);
+    float x1, y1;
+    float x2, y2;
+    float x3, y3;
 
-        float perimCount(triangle& trg);
+    float perimeter, square;
 };
 
 
