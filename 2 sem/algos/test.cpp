@@ -3,17 +3,14 @@
 using namespace std;
 
 
-const int cnst = INT_MIN;
-
-
 struct stData
 {
     list<pair<int, int>> data;
 
-    int sum = 0, counter = 0, max_p = cnst;
+    int sum, counter, max_p;
 
 
-    stData() : data(), sum(sum), counter(counter), max_p(max_p) {}
+    stData() : data(), sum(0), counter(0), max_p(INT_MIN) {}
 
 
     void add(int id, int pts)
@@ -36,15 +33,21 @@ struct stData
                 data.erase(elem);
 
                 sum -= elem->second;
-                max_p = cnst;
 
                 if (elem->second != max_p)
                 {
                     return;
                 }
 
+                max_p = INT_MIN;
+                
                 break;
             }
+        }
+
+        for (auto elem = data.begin(); elem != data.end(); ++elem)
+        {
+            max_p = max(max_p, elem->second);
         }
     }
 };
@@ -55,17 +58,8 @@ int main()
     int m, q;
     cin >> m >> q;
 
-    int sum = 0, counter = 0, max_p = cnst;
-
 
     vector<stData> stD(m);
-    vector<int> grSum(m);
-    vector<int> grAm(m);
-
-    for (int i = 0; i < m; ++i)
-    {
-        sum += stD[i].second;
-    }
 
 
     for (size_t i = 0; i < q; ++i)
@@ -78,7 +72,28 @@ int main()
             int group;
             cin >> group;
 
-            int avg = stD[group - 1];
+            cout << stD[group - 1].sum / stD[group - 1].counter << "\n";
+        }
+        else if (param = '-')
+        {
+            int group, id;
+            cin >> group >> id;
+
+            stD[group - 1].del(id);
+        }
+        else if (param = '+')
+        {
+            int group, id, pts;
+            cin >> group >> id >> pts;
+
+            stD[group - 1].add(id, pts);
+        }
+        else if (param == 'm')
+        {
+            int group;
+            cin >> group;
+
+            cout << stD[group - 1].max_p << "\n";
         }
     }
 
