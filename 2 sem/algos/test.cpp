@@ -2,6 +2,7 @@
 
 using namespace std;
 
+const int cnst = INT_MIN;
 
 struct stData
 {
@@ -10,7 +11,7 @@ struct stData
     int sum, counter, max_p;
 
 
-    stData() : data(), sum(0), counter(0), max_p(INT_MIN) {}
+    stData() : sum(0), counter(0), max_p(cnst), data(){}
 
 
     void add(int id, int pts)
@@ -39,7 +40,7 @@ struct stData
                     return;
                 }
 
-                max_p = INT_MIN;
+                max_p = cnst;
                 
                 break;
             }
@@ -55,6 +56,10 @@ struct stData
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
     int m, q;
     cin >> m >> q;
 
@@ -72,31 +77,38 @@ int main()
             int group;
             cin >> group;
 
-            cout << stD[group - 1].sum / stD[group - 1].counter << "\n";
+            int index = group - 1;
+
+            cout << stD[index].sum / stD[index].counter << "\n";
         }
-        else if (param = '-')
+        else if (param == '-')
         {
             int group, id;
             cin >> group >> id;
 
-            stD[group - 1].del(id);
+            int index = group - 1;
+
+            stD[index].del(id);
         }
-        else if (param = '+')
+        else if (param == '+')
         {
             int group, id, pts;
             cin >> group >> id >> pts;
 
-            stD[group - 1].add(id, pts);
+            int index = group - 1;
+
+            stD[index].add(id, pts);
         }
-        else if (param == 'm')
+        else
         {
             int group;
             cin >> group;
 
-            cout << stD[group - 1].max_p << "\n";
+            int index = group - 1;
+
+            cout << stD[index].max_p << "\n";
         }
     }
-
 
     return 0;
 }
