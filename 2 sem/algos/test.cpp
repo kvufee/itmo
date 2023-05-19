@@ -2,78 +2,85 @@
 
 using namespace std;
 
+
+const int cnst = INT_MIN;
+
+
 struct stData
 {
-    long long id;
-    long long points;
-    long long group;
-    long long counter;
-    long long sum;
-    long long max_p;
+    list<pair<int, int>> data;
 
-    stData(long long id, long long points, long long group,
-           long long counter, long long sum, long long max_p) :
-            id(id), points(points), group(group),
-            counter(counter), sum(sum), max_p(max_p) {}
-};
+    int sum = 0, counter = 0, max_p = cnst;
 
-class HT
-{
-    long long size;
-    vector<stData> hTable;
 
-public:
-    HT(long long TS) : size(TS)
+    stData() : data(), sum(sum), counter(counter), max_p(max_p) {}
+
+
+    void add(int id, int pts)
     {
-        hTable.resize(size);
+        data.emplace_back(id, pts);
+
+        sum += pts;
+        max_p = max(max_p, pts);
+        counter += 1;
     }
 
-    long long hashFunc(long long temp) const
+    void del(int id)
     {
-        return temp % size;
-    }
+        counter -= 1;
 
-    void add(long long& group, long long& id, long long& points)
-    {
-        long long index = hashFunc(id);
-        hTable[index].emplace_back(group, id, points);
-    }
+        for (auto elem = data.begin(); elem != data.end(); ++elem)
+        {
+            if (elem->first == id)
+            {
+                data.erase(elem);
 
-    void del();
+                sum -= elem->second;
+                max_p = cnst;
 
-    long long avg(const HT& htTemp) const
-    {
-        
+                if (elem->second != max_p)
+                {
+                    return;
+                }
+
+                break;
+            }
+        }
     }
 };
 
 
 int main()
 {
-    int n;
-    cin >> n;
+    int m, q;
+    cin >> m >> q;
 
-    HT set1(n + 1);
-    HT set2(n + 1);
+    int sum = 0, counter = 0, max_p = cnst;
 
-    long long first, second;
 
-    for (int i = 0; i < n; ++i)
+    vector<stData> stD(m);
+    vector<int> grSum(m);
+    vector<int> grAm(m);
+
+    for (int i = 0; i < m; ++i)
     {
-        cin >> first;
-        set1.add(first);
+        sum += stD[i].second;
     }
 
-    for (int i = 0; i < n; ++i)
-    {
-        cin >> second;
-        set2.add(second);
-    }
 
-    if (set1.equal(set2) == 1)
+    for (size_t i = 0; i < q; ++i)
     {
-        cout << "YES";
-    } else cout << "NO";
+        char param;
+        cin >> param;
+
+        if (param == 'a')
+        {
+            int group;
+            cin >> group;
+
+            int avg = stD[group - 1];
+        }
+    }
 
 
     return 0;
