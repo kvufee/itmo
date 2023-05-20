@@ -3,72 +3,35 @@
 using namespace std;
 
 
-class HT
-{
-    long long size;
-    vector<list<long long>> hTable;
-public:
-    HT(long long TS) : size(TS)
-    {
-        hTable.resize(size);
-    }
-
-    long long hashFunc(long long temp)
-    {   
-        if (temp < 0)
-        {
-            return size - abs(temp);
-        }
-
-        return temp % size;
-    }
-
-    void add(long long temp)
-    {
-        long long index = hashFunc(temp);
-        hTable[index].emplace_back(temp, 0);
-    }
-
-    
-};
-{
-    vector<int> first;
-    vector<int> second;
-
-    int ans;
-
-    chairs() : ans(0), first(), second() {}
-
-    int calculate(int n)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            int tmp;
-            cin >> tmp;
-
-            if (tmp < i)
-            {
-                ans += first[i - tmp];
-                ++first[i - tmp];
-            }
-            else
-            {
-                ans += second[tmp - i];
-                ++second[tmp - i];
-            }
-        }
-
-        return ans;
-    }
-};
-
-
 int main()
 {
-    int n;
+    int n, res = 0;
     cin >> n;
 
+    vector<int> first(10000010);
+    vector<int> second(10000010);
 
+    for (int i = 0; i < n; ++i)
+    {
+        int input;
+        cin >> input;
+
+        if (input < i)
+        {
+            int temp1 = first[i - input];
+
+            res += temp1;
+            ++first[i - input];
+        } else 
+        {
+            int temp2 = second[input - i];
+
+            res += temp2;
+            ++second[input - i];
+        }
+    }
+
+    cout << res;
 
     return 0;
 }
