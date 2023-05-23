@@ -49,7 +49,7 @@ bool Triangle::operator==(const Triangle& trg) const
 
 bool Triangle::operator!=(const Triangle& trg) const
 {
-    return (square != trg.square)
+    return (square != trg.square);
 }
 
 bool Triangle::operator<(const Triangle& trg) const
