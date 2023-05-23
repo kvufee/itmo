@@ -1,8 +1,3 @@
-struct Vec
-{
-    float x, y;
-};
-
 class Triangle
 {
     float x1, y1;
