@@ -1,5 +1,3 @@
-#pragma once
-
 #include "BaseCObject.h"
 #include "IDialogInitiable.h"
 #include "IGeoFig.h"
@@ -12,7 +10,7 @@ class hexagon : public BaseCObject, public IDialogInitiable, public IGeoFig, pub
 public:
     hexagon();
 
-    hexagon(const char* fig_name, unsigned int figure_size, double fig_square, double fig_perimeter, double fig_mass);
+    hexagon(double fig_side, double fig_square, double fig_perimeter, double fig_mass);
 
     //BaseCObject
     const char* classname() override;
@@ -27,19 +25,15 @@ public:
 
     //IPhysObject
     double mass() override;
-    bool operator== (IPhysObject& ob) override;
-    bool operator< (IPhysObject& ob) override;
+    bool operator==(IPhysObject& ob) override;
+    bool operator<(IPhysObject& ob) override;
 
     //IPrintable
     void draw() override;
 
 
 private:
-    const char* fig_name;
-
-    unsigned int fig_size;
-
+    double fig_side;
     double fig_square, fig_perimeter;
-
     double fig_mass;
 };
