@@ -1,8 +1,89 @@
-//
-// Created by wibbleydock on 5/23/23.
-//
+#pragma once
 
-#ifndef ITMO_STACK_H
-#define ITMO_STACK_H
+#include <iostream>
 
-#endif //ITMO_STACK_H
+using namespace std;
+
+
+class Stack
+        {
+private:
+    int stack[100];
+    int head;
+
+public:
+    Stack() {
+        head = -1;
+    }
+
+    ~Stack () {};
+
+    bool is_empty()
+    {
+        return head == -1;
+    }
+
+    bool is_full()
+    {
+        return head == 99;
+    }
+
+    void push(int x)
+    {
+        if (is_full())
+        {
+            cout << "Stack is full";
+            return;
+        }
+
+        ++head;
+        stack[head] = x;
+    }
+
+    int pop()
+    {
+        if (is_empty())
+        {
+            cout << "Stack is empty";
+            return -1;
+        }
+
+        int temp = stack[head];
+
+        --head;
+
+        return temp;
+    }
+
+    int look_at_top()
+    {
+        return stack[head];
+    }
+
+    Stack& operator<<(int x)
+    {
+        push(x);
+        return *this;
+    }
+
+    Stack& operator>>(int &x)
+    {
+        x = pop();
+        return *this;
+    }
+
+    void show_stack(Stack stack)
+    {
+        if (stack.is_empty())
+        {
+            cout << "Stack is empty!";
+            return;
+        }
+
+        while (!stack.is_empty())
+        {
+            cout << stack.pop() << " ";
+        }
+        cout << '\n';
+    }
+};
