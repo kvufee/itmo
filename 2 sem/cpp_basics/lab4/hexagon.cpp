@@ -54,12 +54,12 @@ double hexagon::mass()
     return fig_mass;
 }
 
-bool hexagon::operator== (IPhysObject& ob)
+bool hexagon::operator==(IPhysObject& ob)
 {
     return mass() == ob.mass();
 }
 
-bool hexagon::operator< (IPhysObject& ob)
+bool hexagon::operator<(IPhysObject& ob)
 {
     return mass() < ob.mass();
 }
