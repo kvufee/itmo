@@ -4,6 +4,17 @@
 
 using namespace std;
 
+
+template <typename T, int N>
+T findMin(T a, T b)
+{
+    if (a < b)
+    {
+        return a;
+    } else return b;
+}
+
+
 template <typename T, int N>
 Stack<T, N>::Stack()
 {
@@ -28,7 +39,7 @@ void Stack<T, N>::add(T x)
 {
     if (isFull())
     {
-        cout << "Stack is full";
+        cout << "Error: Stack is full";
         return;
     }
 
@@ -41,7 +52,7 @@ T Stack<T, N>::del()
 {
     if (isEmpty())
     {
-        cout << "Stack is empty";
+        cout << "Error: Stack is empty";
         return -1;
     }
 

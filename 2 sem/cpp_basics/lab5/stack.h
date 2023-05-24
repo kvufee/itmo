@@ -7,7 +7,7 @@ public:
     Stack();
     bool isEmpty();
     bool isFull();
-    void add(int x);
+    void add(T x);
     T del();
     T checkHead();
     Stack& operator<<(T x);
