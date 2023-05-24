@@ -1,18 +1,9 @@
 #include "stack.h"
 
+#include <stdexcept>
 #include <iostream>
 
 using namespace std;
-
-
-template <typename T, int N>
-T findMin(T a, T b)
-{
-    if (a < b)
-    {
-        return a;
-    } else return b;
-}
 
 
 template <typename T, int N>
@@ -39,8 +30,7 @@ void Stack<T, N>::add(T x)
 {
     if (isFull())
     {
-        cout << "Error: Stack is full";
-        return;
+        throw overflow_error("Error: stack is full");
     }
 
     ++head;
@@ -52,8 +42,7 @@ T Stack<T, N>::del()
 {
     if (isEmpty())
     {
-        cout << "Error: Stack is empty";
-        return -1;
+        throw underflow_error("Error: stack is empty");
     }
 
     int temp = stack[head];
@@ -88,8 +77,7 @@ void Stack<T, N>::print(Stack<T, N> s)
 {
     if (s.isEmpty())
     {
-        cout << "Stack is empty!";
-        return;
+        throw underflow_error("Error: stack is empty");
     }
 
     while (!s.isEmpty())
