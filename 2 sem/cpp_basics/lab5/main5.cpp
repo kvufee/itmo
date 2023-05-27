@@ -1,4 +1,5 @@
 #include "stack.h"
+#include "stack.cpp"
 
 #include <bits/stdc++.h>
 
@@ -17,30 +18,20 @@ T findMin(T a, T b)
 
 int main()
 {
-    Stack<int, 10> stack;
+    Stack<int, 5> stack;
 
-    try
+    cout << "Enter stack elements: " << '\n';
+    for (int i = 0; i < 6; i++)
     {
-        stack.add(1);
-        stack.add(5);
-        stack.add(12);
-        stack.add(-33);
-        stack.add(-1);
-        stack.add(11);
+        int x;
+        cin >> x;
+        stack.push(x);
+    };
 
-        stack.del();
-        stack.del();
-    } catch (const overflow_error& error)
+    for (int i = 0; i < 6; i++)
     {
-        cout << error.what() << "\n";
-    } catch (const underflow_error& error)
-    {
-        cout << error.what() << "\n";
-    }
-
-
-    int a = 100, b = -3;
-    auto minval = findMin(a, b);
+        stack.pop();
+    };
 
     return 0;
 }
