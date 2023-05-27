@@ -6,84 +6,66 @@
 using namespace std;
 
 
-template <typename T, int N>
+class stackFullException : public exception
+{
+public:
+    const char* what() const throw ()
+    {
+        return "Stack is full";
+    }
+};
+
+class stackEmptyException : public exception
+{
+public:
+    const char* what() const throw ()
+    {
+        return "Stack is empty";
+    }
+};
+
+template < typename T, int N >
 Stack<T, N>::Stack()
 {
-    T head = -1;
-    T stack[100];
+    top = -1;
 }
 
-template <typename T, int N>
+template < typename T, int N >
+Stack<T, N>::~Stack () {};
+
+template < typename T, int N >
 bool Stack<T, N>::isEmpty()
 {
-    return head == -1;
+    return top == -1;
 }
 
-template <typename T, int N>
+template < typename T, int N >
 bool Stack<T, N>::isFull()
 {
-    return head == 99;
+    return top == 99;
 }
 
-template <typename T, int N>
-void Stack<T, N>::add(T x)
+template < typename T, int N >
+void Stack<T, N>::push(int x)
 {
     if (isFull())
     {
-        throw overflow_error("Error: stack is full");
+        throw stackFullException();
     }
 
-    ++head;
-    stack[head] = x;
+    top++;
+    stack[top] = x;
 }
 
-template <typename T, int N>
-T Stack<T, N>::del()
+template < typename T, int N >
+T Stack<T, N>::pop()
 {
     if (isEmpty())
     {
-        throw underflow_error("Error: stack is empty");
+        throw stackEmptyException();
     }
 
-    int temp = stack[head];
-
-    --head;
-
+    int temp = stack[top];
+    top--;
     return temp;
-}
-
-template <typename T, int N>
-T Stack<T, N>::checkHead()
-{
-    return stack[head];
-}
-
-template <typename T, int N>
-Stack<T, N>& Stack<T, N>::operator<<(T x)
-{
-    add(x);
-    return *this;
-}
-
-template <typename T, int N>
-Stack<T, N>& Stack<T, N>::operator>>(T &x)
-{
-    x = del();
-    return *this;
-}
-
-template <typename T, int N>
-void Stack<T, N>::print(Stack<T, N> s)
-{
-    if (s.isEmpty())
-    {
-        throw underflow_error("Error: stack is empty");
-    }
-
-    while (!s.isEmpty())
-    {
-        cout << s.del() << " ";
-    }
-
-    cout << '\n';
 }

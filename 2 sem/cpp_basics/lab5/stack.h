@@ -1,16 +1,16 @@
-template <typename T, int N>
+template < typename T, int N >
 class Stack
 {
+private:
     T stack[100];
-    T head;
+    T top;
+
 public:
     Stack();
+    ~Stack ();
+
     bool isEmpty();
     bool isFull();
-    void add(T x);
-    T del();
-    T checkHead();
-    Stack& operator<<(T x);
-    Stack& operator>>(T &x);
-    void print(Stack s);
+    void push(int x);
+    T pop();
 };
