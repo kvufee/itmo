@@ -1,6 +1,6 @@
 #include "stack.h"
 
-#include <stdexcept>
+#include <exception>
 #include <iostream>
 
 using namespace std;
