@@ -68,9 +68,9 @@ bool hexagon::operator<(IPhysObject& ob)
 void hexagon::draw()
 {
     cout << "Figure name is: Hexagon" << "\n";
-    cout << "Fig perimeter: " << fig_perimeter << "\n";
-    cout << "Fig square: " << fig_square << "\n";
-    cout << "Fig mass: " << fig_mass << "\n";
+    cout << "Fig perimeter: " << hexagon::perimeter() << "\n";
+    cout << "Fig square: " << hexagon::square() << "\n";
+    cout << "Fig mass: " << hexagon::mass() << "\n";
     cout << "Fig size: " << hexagon::size() << "\n";
 }
 

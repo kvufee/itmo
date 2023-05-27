@@ -75,8 +75,8 @@ bool ellips::operator<(IPhysObject& ob)
 void ellips::draw()
 {
     cout << "Figure name is: Ellips" << "\n";
-    cout << "Fig perimeter: " << fig_perimeter << "\n";
-    cout << "Fig square: " << fig_square << "\n";
-    cout << "Fig mass: " << fig_mass << "\n";
+    cout << "Fig perimeter: " << ellips::perimeter() << "\n";
+    cout << "Fig square: " << ellips::square() << "\n";
+    cout << "Fig mass: " << ellips::mass() << "\n";
     cout << "Fig size: " << ellips::size() << "\n";
 }
