@@ -7,23 +7,6 @@ using namespace std;
 
 int main()
 {
-    Stack stack;
-
-    for (int i = 0; i < 10; ++i)
-    {
-        int val;
-        cin >> val;
-        stack.add(val);
-    }
-
-    stack.print(stack);
-
-    for (int i = 0; i < 5; ++i)
-    {
-        stack.del();
-    }
-
-
     Triangle trg1;
     Triangle trg2;
 
@@ -61,6 +44,24 @@ int main()
     {
         cout << "trg1 < trg2" << "\n";
     }
+
+
+    Stack stack;
+
+    for (int i = 0; i < 4; i++)
+    {
+        int x;
+        cin >> x;
+        stack.push(x);
+    };
+
+    for (int i = 0; i < 2; i++)
+    {
+        stack.pop();
+    };
+
+    stack.show_stack(stack);
+
 
     return 0;
 }
