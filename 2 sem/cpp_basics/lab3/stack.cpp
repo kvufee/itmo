@@ -7,76 +7,71 @@ using namespace std;
 
 Stack::Stack()
 {
-    int head = -1;
-    int stack[100];
+    top = -1;
 }
 
-bool Stack::isEmpty()
+Stack::~Stack () {};
+
+bool Stack::is_empty()
 {
-    return head == -1;
+    return top == -1;
 }
 
-bool Stack::isFull()
+bool Stack::is_full()
 {
-    return head == 99;
+    return top == 99;
 }
 
-void Stack::add(int x)
+void Stack::push(int x)
 {
-    if (isFull())
+    if (is_full())
     {
-        cout << "Stack is full";
+        std::cout << "Stack is full";
         return;
     }
 
-    ++head;
-    stack[head] = x;
+    top++;
+    stack[top] = x;
 }
 
-int Stack::del()
+int Stack::pop()
 {
-    if (isEmpty())
+    if (is_empty())
     {
-        cout << "Stack is empty";
+        std::cout << "Stack is empty";
         return -1;
     }
 
-    int temp = stack[head];
-
-    --head;
-
+    int temp = stack[top];
+    top--;
     return temp;
 }
 
-int Stack::checkHead()
+int Stack::peek()
 {
-    return stack[head];
+    return stack[top];
 }
 
 Stack& Stack::operator<<(int x)
 {
-    add(x);
+    push(x);
     return *this;
 }
 
 Stack& Stack::operator>>(int &x)
 {
-    x = del();
+    x = pop();
     return *this;
 }
 
-void Stack::print(Stack s)
-{
-    if (s.isEmpty())
-    {
-        cout << "Stack is empty!";
+void Stack::show_stack(Stack s) {
+    if (s.is_empty()) {
+        std::cout << "Stack is empty!";
         return;
     }
 
-    while (!s.isEmpty())
-    {
-        cout << s.del() << " ";
+    while (!s.is_empty()) {
+        std::cout << s.pop() << " ";
     }
-
-    cout << '\n';
+    std::cout << '\n';
 }
