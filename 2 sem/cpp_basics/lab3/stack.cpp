@@ -24,7 +24,7 @@ bool Stack::isFull()
 
 void Stack::push(int x)
 {
-    if (is_full())
+    if (isFull())
     {
         cout << "Stack is full";
         return;
@@ -36,7 +36,7 @@ void Stack::push(int x)
 
 int Stack::pop()
 {
-    if (is_empty())
+    if (isEmpty())
     {
         cout << "Stack is empty";
         return -1;
