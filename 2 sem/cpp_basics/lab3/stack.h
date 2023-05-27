@@ -9,8 +9,8 @@ public:
 
     ~Stack ();
 
-    bool is_empty();
-    bool is_full();
+    bool isEmpty();
+    bool isFull();
     void push(int x);
     int pop();
     int peek();

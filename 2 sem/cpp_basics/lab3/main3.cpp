@@ -48,6 +48,7 @@ int main()
 
     Stack stack;
 
+    cout << "Enter stack elements: " << '\n';
     for (int i = 0; i < 4; i++)
     {
         int x;
