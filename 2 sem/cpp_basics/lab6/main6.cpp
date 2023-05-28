@@ -72,9 +72,9 @@ int main()
     vector<double> numbers2 {2.14, -47.12, 4.45};
     vector<int> numbers3 {1, 2, 3, 4, 5};
 
-    vector<complex<double>> cmplx1 = { {1,2}, {-3,4}, {5,-6} };
-    vector<complex<double>> cmplx2 {3.14, -2.47, 15.35};
-    vector<complex<double>> cmplx3 {1.78, 3.47, -12.12};
+    vector<complex<double>> complex1 = { {1,2}, {-3,4}, {5,-6} };
+    vector<complex<double>> complex2 {3.14, -2.47, 15.35};
+    vector<complex<double>> complex3 {1.78, 3.47, -12.12};
 
 
     bool check_all_of = my_all_of(numbers1.begin(),
@@ -82,29 +82,26 @@ int main()
                                   [](int i){ return i > 5; });
     cout << check_all_of << "\n";
 
-
-    bool check_all_of_complex = my_all_of(cmplx1.begin(), cmplx1.end(), check_real);
-    cout << check_all_of_complex << "\n";
-
-
-    bool check_if_sotred = my_is_sorted(numbers2.begin(),
+    bool check_if_sorted = my_is_sorted(numbers2.begin(),
                                         numbers2.end(),
                                         [](int i, int j){ return i < j; });
-    cout << check_if_sotred << endl;
-
-
-    bool check_if_sorted_complex = my_is_sorted(cmplx2.begin(),cmplx2.end(), check_is_sorted_complx);
-    cout << check_if_sorted_complex << "\n";
-
+    cout << check_if_sorted << "\n";
 
     auto check_backward = my_find_backward(numbers3.begin(),
                                            numbers3.end(),
                                            [](int x) { return x == 5; });
-    cout << *check_backward << endl;
+    cout << *check_backward << "\n";
 
+    /////////////////////////////////////////////////////////////
 
-    auto check_backward_complex = my_find_backward(cmplx3.begin(),
-                                                   cmplx3.end(),
+    bool check_all_of_complex = my_all_of(complex1.begin(), complex1.end(), check_real);
+    cout << check_all_of_complex << "\n";
+
+    bool check_if_sorted_complex = my_is_sorted(complex2.begin(),complex2.end(), check_is_sorted_complx);
+    cout << check_if_sorted_complex << "\n";
+
+    auto check_backward_complex = my_find_backward(complex3.begin(),
+                                                   complex3.end(),
                                                    [](const complex<double>& x) { return x.real() == -12.12; });
     cout << *check_backward_complex << "\n";
 }
