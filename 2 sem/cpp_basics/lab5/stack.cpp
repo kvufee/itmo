@@ -1,7 +1,7 @@
 #include "stack.h"
-
-#include <exception>
+#include <vector>
 #include <iostream>
+#include <exception>
 
 using namespace std;
 
@@ -24,48 +24,74 @@ public:
     }
 };
 
-template < typename T, int N >
-Stack<T, N>::Stack()
+
+template<int N,typename T>
+Stack<N,T>::Stack() : head(nullptr),next(nullptr) {};
+
+template<int N,typename T>
+Stack<N,T>::~Stack()
 {
-    top = -1;
+    while(head != nullptr)
+    {
+        auto * temp = head;
+        head = head->next;
+        delete temp;
+    }
 }
 
-template < typename T, int N >
-Stack<T, N>::~Stack () {};
-
-template < typename T, int N >
-bool Stack<T, N>::isEmpty()
+template<int N,typename T>
+void Stack<N, T>::push(T value)
 {
-    return top == -1;
-}
-
-template < typename T, int N >
-bool Stack<T, N>::isFull()
-{
-    return top == 99;
-}
-
-template < typename T, int N >
-void Stack<T, N>::push(int x)
-{
-    if (isFull())
+    if(size() >= N)
     {
         throw stackFullException();
     }
-
-    top++;
-    stack[top] = x;
+    auto* node = new Stack;
+    node->data = value;
+    node->next = head;
+    head = node;
 }
 
-template < typename T, int N >
-T Stack<T, N>::pop()
+
+template<int N,typename T>
+void Stack<N, T>::pop()
 {
-    if (isEmpty())
+    if(head == nullptr)
     {
         throw stackEmptyException();
     }
+    auto* temp = head;
+    head = head->next;
+    delete temp;
+}
 
-    int temp = stack[top];
-    top--;
-    return temp;
+
+template<int N,typename T>
+void Stack<N, T>::print()
+{
+    auto* temp = head;
+    vector<T> result;
+    while (temp != nullptr)
+    {
+        result.push_back(temp->data);
+        temp = temp->next;
+    }
+    for(auto& x : result)
+    {
+        cout << x << " " << "\n";
+    }
+}
+
+
+template<int N,typename T>
+int Stack<N, T>::size()
+{
+    auto* temp = head;
+    int count = 0;
+    while(temp != nullptr)
+    {
+        count++;
+        temp = temp->next;
+    }
+    return count;
 }

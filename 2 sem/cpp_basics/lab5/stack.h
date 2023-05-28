@@ -1,16 +1,13 @@
-template < typename T, int N >
-class Stack
-{
-private:
-    T stack[100];
-    T top;
-
+template <int N,typename T>
+class Stack{
+    T data;
+    Stack* head;
+    Stack* next;
 public:
     Stack();
-    ~Stack ();
-
-    bool isEmpty();
-    bool isFull();
-    void push(int x);
-    T pop();
+    ~Stack();
+    int size();
+    void push(T value);
+    void pop();
+    void print();
 };
