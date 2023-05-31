@@ -37,12 +37,20 @@ public:
 
     bool isEmpty() const
     {
-        return current_size == 0;
+        if (current_size == 0)
+        {
+            cout << "Stack is empty";
+            return current_size == 0;
+        }
     }
 
     bool ifFull() const
     {
-        return current_size == size;
+        if (current_size == size)
+        {
+            cout << "Stack is full";
+            return current_size == size;
+        }
     }
 
     void pushFront(const T &value)
