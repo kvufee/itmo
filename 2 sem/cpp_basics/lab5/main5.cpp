@@ -88,7 +88,7 @@ int main()
     int a, b;
     cin >> a >> b;
     findMin(a, b);
-
+ё
     try {
         class Stack s(3);
         s.push(10);

@@ -16,6 +16,7 @@ bool my_all_of(iterator first, iterator last,  predicate pred)
             return false;
         }
     }
+
     return true;
 }
 
@@ -30,8 +31,10 @@ bool my_is_sorted(iterator first, iterator last, predicate pred)
     {
         return true;
     }
+
     auto prev = first;
     first++;
+
     for (; first != last; first++, prev++)
     {
         if (pred(*prev, *first))
@@ -43,6 +46,7 @@ bool my_is_sorted(iterator first, iterator last, predicate pred)
             return false;
         }
     }
+
     return true;
 }
 
@@ -62,6 +66,7 @@ iterator my_find_backward(iterator first, iterator last, const predicate pred)
             return end;
         }
     }
+
     return last;
 }
 
@@ -104,4 +109,6 @@ int main()
                                                    complex3.end(),
                                                    [](const complex<double>& x) { return x.real() == -12.12; });
     cout << *check_backward_complex << "\n";
+
+    return 0;
 }
