@@ -2,7 +2,6 @@
 
 #include "buffer.h"
 
-
 using namespace std;
 
 
@@ -14,11 +13,7 @@ int main()
     c.pushFront(-3);
     c.pushFront(25);
 
-    c.checkHead();
     c.checkTail();
 
-    sort(c.begin(),c.end());
-
-    c.checkHead();
-    c.checkTail();
+    return 0;
 }
