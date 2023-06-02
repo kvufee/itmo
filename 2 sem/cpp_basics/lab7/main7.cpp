@@ -8,12 +8,36 @@ using namespace std;
 int main()
 {
     CBuffer<int> c(4);
-    c.pushFront(13);
-    c.pushFront(2);
-    c.pushFront(-3);
-    c.pushFront(25);
 
-    c.checkTail();
+    c.pushBack(13);
+    c.pushBack(2);
+    c.pushBack(-3);
+    c.pushBack(25);
+
+    for (auto i : c)
+    {
+        cout << i << " ";
+    }
+
+    cout << "\n";
+
+    sort(c.begin(), c.end());
+
+    for (auto i : c)
+    {
+        cout << i << " ";
+    }
+
+    cout << "\n";
+
+    c.popBack();
+
+    for (auto i : c)
+    {
+        cout << i << " ";
+    }
+
+    cout << "\n";
 
     return 0;
 }
