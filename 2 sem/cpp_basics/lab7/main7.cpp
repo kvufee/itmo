@@ -21,7 +21,7 @@ int main()
 
     cout << "\n";
 
-    sort(c.begin(), c.end());
+    c.popFront();
 
     for (auto i : c)
     {

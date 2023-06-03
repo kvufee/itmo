@@ -141,6 +141,7 @@ public:
         }
     };
 
+
     CBuffer(unsigned capacity) :
             buffer(new T[capacity]),
             size(capacity),
@@ -166,27 +167,6 @@ public:
     T operator[](int id)
     {
         return buffer[id % size];
-    }
-
-    void pushFront(const T &x)
-    {
-        if (end_ == size)
-        {
-            buffer[start] = x;
-
-            return;
-        }
-
-        for(int i = end_; i >= start; --i)
-        {
-            buffer[i + 1] = buffer[i];
-        }
-
-        buffer[start] = x;
-
-        ++end_;
-
-        return;
     }
 
     void popFront()
@@ -252,5 +232,26 @@ public:
         delete[] buffer;
         buffer = tmp;
         size = n;
+    }
+
+    void pushFront(const T &x)
+    {
+        if (end_ == size)
+        {
+            buffer[start] = x;
+
+            return;
+        }
+
+        for(int i = end_; i >= start; --i)
+        {
+            buffer[i + 1] = buffer[i];
+        }
+
+        buffer[start] = x;
+
+        ++end_;
+
+        return;
     }
 };
