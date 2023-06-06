@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{graphicx, xfrac, bigints, parskip, amsmath}
+
+
+\title{LaTeX homework}
+
+\begin{document}
+
+\maketitle
+\Large
+
+N1
+
+$ \iiint\limits_V {xy^2z^3} \, dx \, dy \, dz \hspace{50}
+z = 0, x = 1, y = x, z = xy $ \newline
+
+\vspace*{\baselineskip}
+
+calculating intergral: \int_0^{1} dx \int_0^{x} dy \int_0^{xy} dz \newline
+\vspace*{\baselineskip}
+
+
+\int_0^{xy} dz = z(xy) - z(0) = xy \newline
+
+\vspace*{\baselineskip}
+
+\int_0^x xydy = x\int_0^x ydy = x*\frac{y^2}{2} = \frac{x^3}{2} \newline
+
+\vspace*{\baselineskip}
+
+\int_0^1 \frac{x^3}{2}dx = \frac{1}{2}\int_0^1 x^3dx = \frac{1}{2} * \frac{x^4}{4} = \frac{1}{2} * \frac{1}{4} = \frac{1}{8} \newline
+
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+
+N2
+
+$$\iiint\limits_V  \frac{dxdydz}{(1+x+y+z)^3} \hspace{50}$$ x = 0, y = 0, z = 0, x + y + z = 1 \newline
+\vspace*{\baselineskip}
+
+calculating intergral: \int_0^{1} dx \int_0^{1-x} dy \int_0^{1-x-y} \frac{dz}{(1+x+y+z)^3} \newline
+\vspace*{\baselineskip}
+
+\int_0^{1-x-y} \frac{1}{(1+x+y+z)^3} = \int_0^{1-x-y} \frac{d(x+y+z}{(1+x+y+z)^3} \newline
+\vspace*{\baselineskip}
+
+- \int_0^{1-x} \frac{dy}{2(1+x+y+z)^3} = \int_0^{1-x} \frac{dy}{2(2-x-y)^3} \newline
+\vspace*{\baselineskip}
+
+\int_0^1 \frac{dx}{2(2-x-y)^3} = \frac{dx}{2(2-x-(1-x))^3} = \frac{dx}{2(1)^3} = \frac{1}{2} \int_0^1 dx = \frac{1}{2} \newline
+
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+
+
+N3
+
+$$\iiint\limits_V  xyzdxdydz \hspace{50}$$ x = 0, y = 0, z = 0, x^2 + y^2 + z^2 = 1 \newline
+\vspace*{\baselineskip}
+
+
+calculating intergral: \int_0^{1} dx \int_0^{1-x^2} dy \int_0^{1-x^2-y^2} xyzdz \newline
+\vspace*{\baselineskip}
+
+
+\end{document}
