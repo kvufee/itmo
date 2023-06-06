@@ -37,7 +37,7 @@ calculating intergral: \int_0^{1} dx \int_0^{x} dy \int_0^{xy} dz \newline
 
 N2
 
-$$\iiint\limits_V  \frac{dxdydz}{(1+x+y+z)^3} \hspace{50}$$ x = 0, y = 0, z = 0, x + y + z = 1 \newline
+\iiint\limits_V  \frac{dxdydz}{(1+x+y+z)^3} \hspace{50}$$ x = 0, y = 0, z = 0, x + y + z = 1 \newline
 \vspace*{\baselineskip}
 
 calculating intergral: \int_0^{1} dx \int_0^{1-x} dy \int_0^{1-x-y} \frac{dz}{(1+x+y+z)^3} \newline
@@ -59,12 +59,21 @@ calculating intergral: \int_0^{1} dx \int_0^{1-x} dy \int_0^{1-x-y} \frac{dz}{(1
 
 N3
 
-$$\iiint\limits_V  xyzdxdydz \hspace{50}$$ x = 0, y = 0, z = 0, x^2 + y^2 + z^2 = 1 \newline
+\iiint\limits_V  xyzdxdydz \hspace{50}$$ x = 0, y = 0, z = 0, x^2 + y^2 + z^2 = 1 \newline
 \vspace*{\baselineskip}
 
 
 calculating intergral: \int_0^{1} dx \int_0^{1-x^2} dy \int_0^{1-x^2-y^2} xyzdz \newline
 \vspace*{\baselineskip}
+
+xy\int_0^{1-x^2-y^2} zdz = xy * \frac{z^2}{2} \Bigg|_{0}^{1-x^2-y^2} = xy * \frac{(1-x^2-y^2)^2}{2} \newline
+\vspace*{\baselineskip}
+
+\int_0^{1-x^2} \frac{x * (1-x^2-y^2}{2} ydy = \frac{x * (1-x^2-y^2}{2} * y^2 \Bigg|_{0}^{1-x^2} = \frac{x * (1-x^2-(1-x^2)^2}{4} * (1-x^2)^2 \newline
+\vspace*{\baselineskip}
+
+
+\int_0^1 \frac{x * (1-x^2-(1-x^2)^2 * (1-x^2)^2}{4} dx = - \frac{x^4 * (4x^6 - 15x^4 + 20x^2 - 10}{160} \Bigg|_{0}^{1} = - \frac{1 * (-1)}{160} = \frac{1}{160}
 
 
 \end{document}
