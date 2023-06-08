@@ -6,7 +6,6 @@ int main()
     FILE *file = fopen("evm2.txt", "r+b");
 
     int arr[1000];
-    int tenItems[10];
     int num, element = 0, counter = 0;
 
     while (fscanf(file, "%d", &num) == 1 && element < 1000)
@@ -26,42 +25,67 @@ int main()
     printf("\n");
 
     __asm__(
-            "movq %0, %%r8 \n\t"
-            "movq $0, %%r9 \n\t"
-            "movq $0, %%rcx \n\t"
-            "movq $0, %%rbx \n\t"
+            "movq %0, %%r8 \n\t"        // запись переменной р8 (массив арр)
+            "movq $0, %%r9 \n\t"        // запись переменной р9. р9 = 0
 
-            "movq %0, %%r8 \n\t" // r8 == arr
-            "movl %1, %%ecx \n\t" // ecx == counter
-            "dec %%ecx \n\t"
-            "leaq (%%r8, %%rcx, 4), %%rbx \n\t" // адрес указывает на конец массива
-            "movq %%rbx, %%r8 \n\t" // рбх в р8
-            "movq $0, %%rcx \n\t" //обнуляю рсх
-            "movq %r8, %%rax \n\t" // адрес из р8 в рах
-            "movl $9, %%ecx \n\t" // записываю в есх значение 9
-            "leaq (%%rax, %%rcx,4), %%rbx \n\t" // адрес указывает на конец массива
-            "movq %%rbx, %%rax \n\t" //
-            "movq $0, %%rcx \n\t"
-            "movl $10, %%ecx \n\t"  // если ecx ==
+            "loopSecond : \n\t"         // цикл для завершения
+            "cmpl %%r9d, %1 \n\t"       // если р9 == counter тогда
+            "je break \n\t"             // переход в метку break :
+            "movq $0, %%r10 \n\t"       // запись переменной р10. р10 = 0
+            "movq $0, %%rax \n\t"       // запись переменной рах. рах = 0
+            "movq %%r8, %%rax \n\t"     // значение р8 записывается в регистр данных
+            "movl %%r9d, %%r10d \n\t"   // значение р9 записывается в р10. буква д для 32бит регистра числа.
+            "jmp loopFirst \n\t"        // переход в первый цикл
 
-            "write: \n\t"
-            "movl (%%r8), %%r9d \n\t"
-            "movl %%r9d, (%%rax) \n\t"
-            "subq $4, %%r8 \n\t"
-            "subq $4, %%rax \n\t"
+            "loopFirst :\n\t"
+            "cmpl $0, %%r10d \n\t"      // если р10 = 0,
+            "je iterSecond \n\t"        // то переход на метку вторая итерация
+            "jmp comp \n\t"             // иначе безусловный переход на comp
 
-            "writeInLoop: \n\t"
-            :
-            :"D"(arr), "p"(counter), "a"(tenItems)
-            :"%rbx", "%rcx", "r8", "r9", "r10");
+            "comp: \n\t"
+            "movq $0, %%rbx \n\t"       // rbx = 0
+            "movq $0, %%rcx \n\t"       // rcx = 0
+            "movq $0, %%rdx \n\t"       // rdx = 0
+            "lea -4(%%rax), %%rbx \n\t" // загрузка адреса в регистр рбх. вычисление адреса на 4 бита влево от rax
+            "movl (%%rbx), %%ecx\n\t"   // запись из рбх в есх. смещение 32бит значение в регистр
+            "movl (%%rax), %%edx \n\t"  // то же самое
+            "cmpl %%edx, %%ecx \n\t"    // сравнение значений едх и есх
+            "jl swap \n\t"              // функция перехода, если едх > есх
+            "jmp iterSecond \n\t"       // иначе БУ переход во вторую итерацию
+
+            "swap:\n\t"                 //
+            "movq $0, %%rbx \n\t"       // рбх = 0
+            "movq $0, %%rcx \n\t"       // рсх = 0
+            "movq $0, %%rdx \n\t"       // рдх = 0
+            "movl (%%rax), %%ebx\n\t"   // запись 32бит в ебх
+            "lea -4(%%rax), %%rcx\n\t"  // смещение значения рах на 4 бита влево и записть в рсх
+            "movl (%%rcx), %%edx \n\t"  // запись 32бит рсх в едх
+            "movl %%ebx, (%%rcx)\n\t"   // запись ебх в рсх
+            "movl %%edx, (%%rax) \n\t"  // запис едх в рах
+            "jmp iterFirst \n\t"        // безусловный переход на метку
+
+            "iterFirst: \n\t"           // пометка выполнения блока первого цикла
+            "dec %%r10d \n\t"           // уменьшение значения регистра на 1
+            "subq $4, %%rax \n\t"       // по сути переход к следующему элементу массива
+            "jmp loopFirst\n\t"         // БУ переход в
+
+            "iterSecond : \n\t"         // пометка выполнения второго цикла
+            "addq $4, %%r8 \n\t"        // увеличение р8 на 4, что значит переход к следующему элементу
+            "inc %%r9d \n\t"            // увеличение р9 на 1
+            "jmp loopSecond \n\t"       // БУ переход в
+
+            "break :"
+            : //нет входных операндов
+            :"D"(arr), "p"(counter) //"D" - связывает arr с регистром доступа к данным, "p" - размер rcx = counter
+            :"%rax", "%rbx", "%rcx", "%rdx", "r8", "r9", "r10");
 
 
-    for (int j = 0; j < element; j++)
+    for (int j = 0; j < 10; j++)
     {
         printf("%d ", arr[j]);
     }
 
-    for (int i = 0; i < counter; i++)
+    for (int i = 0; i < 10; i++)
     {
         fprintf(file, "%d ", arr[i]);
     }
