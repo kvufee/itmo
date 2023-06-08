@@ -6,6 +6,7 @@ int main()
     FILE *file = fopen("evm2.txt", "r+b");
 
     int arr[1000];
+    int topTen[10];
     int num, element = 0, counter = 0;
 
     while (fscanf(file, "%d", &num) == 1 && element < 1000)
@@ -76,16 +77,45 @@ int main()
 
             "break :"
             : //нет входных операндов
-            :"D"(arr), "p"(counter) //"D" - связывает arr с регистром доступа к данным, "p" - размер rcx = counter
+            :"D"(arr), "p"(counter)
             :"%rax", "%rbx", "%rcx", "%rdx", "r8", "r9", "r10");
 
+
+    __asm__(
+            "movq $0, %%r8 \n\t"
+            "movq $0, %%r9 \n\t"
+            "movq $0, %%rcx \n\t"
+            "movl $0, %%rbx \n\t"
+            "movq %0, %%r8 \n\t"
+            "movl %1, %%ecx \n\t"
+            "dec %%ecx \n\t"
+            "leaq (%%r8), %%rbx \n\t"
+            "movq %%rbx, (%%r8) \n\t"
+            "movq $0, %%rcx \n\t"
+            "movq %2, %%rax \n\t"
+            "movl $9, %%ecx \n\t"
+            "leaq %%rax, %%rbx \n\t"
+            "movq %%rbx, %%rax \n\t"
+            "movq $0, %%rcx \n\t"
+            "movl $10, %%ecx \n\t"
+
+            "put: \n\t"
+            "movl (%%r8), %%r9d \n\t"
+            "movl %%r9d, (%%rax) \n\t"
+            "addq $4, %%r8 \n\t"
+            "addq $4, %%rax \n\t"
+
+            "break :\n\t"
+            :
+            :"D"(arr), "D"(counter), "p"(topTen)
+            :"%rax", "%rbx", "%rcx", "%rdx", "r8", "r9", "r10");
 
     for (int j = 0; j < 10; j++)
     {
         printf("%d ", arr[j]);
     }
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10  ; i++)
     {
         fprintf(file, "%d ", arr[i]);
     }
