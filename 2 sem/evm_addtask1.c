@@ -5,7 +5,7 @@ void asmSort(int *arr, int counter) {
             "movq %0, %%r8 \n\t"        // запись переменной р8 (массив арр)
             "movq $0, %%r9 \n\t"        // запись переменной р9. р9 = 0
 
-            "currCheck :\n\t"
+            "goToComp :\n\t"
             "cmpl $0, %%r10d \n\t"      // если р10 = 0,
             "je iterSecond \n\t"        // то переход на метку вторая итерация
             "jmp comp \n\t"             // иначе безусловный переход на comp
