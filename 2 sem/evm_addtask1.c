@@ -10,10 +10,10 @@ void asmSort(int *arr, int counter) {
             "je iterSecond \n\t"        // то переход на метку вторая итерация
             "jmp comp \n\t"             // иначе безусловный переход на comp
 
-            "goToCurrCheck: \n\t"           // пометка выполнения блока первого цикла
+            "goToComp_iteration : \n\t"           // пометка выполнения блока первого цикла
             "dec %%r10d \n\t"           // уменьшение значения регистра на 1
             "subq $4, %%rax \n\t"       // переход к следующему элементу массива
-            "jmp currCheck\n\t"         // БУ переход в
+            "jmp goToComp\n\t"         // БУ переход в
 
             "isFinished : \n\t"         // цикл для завершения
             "cmpl %%r9d, %1 \n\t"       // если р9 == counter тогда
@@ -22,7 +22,7 @@ void asmSort(int *arr, int counter) {
             "movq $0, %%rax \n\t"       // запись переменной рах. рах = 0
             "movq %%r8, %%rax \n\t"     // значение р8 записывается в регистр данных
             "movl %%r9d, %%r10d \n\t"   // значение р9 записывается в р10. буква д для 32бит регистра числа.
-            "jmp currCheck \n\t"        // переход в первый цикл
+            "jmp goToComp \n\t"        // переход в первый цикл
 
             "goToNext : \n\t"         // пометка выполнения второго цикла
             "addq $4, %%r8 \n\t"        // увеличение р8 на 4, что значит переход к следующему элементу
@@ -49,7 +49,7 @@ void asmSort(int *arr, int counter) {
             "movl (%%rcx), %%edx \n\t"  // запись 32бит рсх в едх
             "movl %%ebx, (%%rcx)\n\t"
             "movl %%edx, (%%rax) \n\t"
-            "jmp goToCurr \n\t"        // безусловный переход на метку
+            "jmp goToComp_iteration \n\t"        // безусловный переход на метку
 
             "break :"
             : //нет входных операндов
