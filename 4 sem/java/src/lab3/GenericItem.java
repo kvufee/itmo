@@ -1,6 +1,5 @@
-package lab2;
+package lab3;
 
-import java.awt.event.ItemEvent;
 import java.util.Date;
 
 public class GenericItem
@@ -12,26 +11,28 @@ public class GenericItem
         Item third = new Item();
 
         first.ID = 1;
-        first.name = "Protein";
-        first.price = 100.5F;
-        first.category = Category.FOOD;
+        first.Name = "Protein";
+        first.Price = 100.5F;
+        first.Category = Category.FOOD;
         first.printAll();
 
         second.ID = 2;
-        second.name = "HQD Titan";
-        second.price = 1050F;
-        second.category = Category.OTHER;
+        second.Name = "HQD Titan";
+        second.Price = 1050F;
+        second.Category = Category.OTHER;
         second.printAll();
 
         third.ID = 3;
-        third.name = "Milk";
-        third.price = 120.33F;
+        third.Name = "Milk";
+        third.Price = 120.33F;
         third.printAll();
     }
 }
 
 class Item
 {
+    public lab3.Category Category;
+
     public Item(int id, String name, float price, Category category)
     {
         ID = id;
@@ -49,14 +50,13 @@ class Item
     }
 
     public Item()
-    {
-        
-    }
+    { }
 
     public int ID;
     public String Name;
     public float Price;
-    public Category CurrentCategory = Category.OTHER;
+    public Category CurrentCategory = lab3.Category.OTHER;
+    public static int currentID;
     void printAll()
     {
         System.out.println("ID: " + ID + ", Name: " + Name + ", Price: " + Price + ", Category: " + CurrentCategory);
@@ -65,13 +65,34 @@ class Item
 
 class Food
 {
-    public String name;
-    public float price;
-    public Food analog;
-    public Date date;
-    public short expires;
+    public Food(String name, float price, Food analog, Date date, short expires)
+    {
+        Name = name;
+        Price = price;
+        Analog = analog;
+        Date = date;
+        Expires = expires;
+    }
+
+    public Food(String name, float price, short expires)
+    {
+        this.Name = name;
+        this.Price = price;
+        this.Expires = expires;
+    }
+
+    public Food(String name)
+    {
+        this.Name = name;
+    }
+
+    public String Name;
+    public float Price;
+    public Food Analog;
+    public Date Date;
+    public short Expires;
     void printAll()
     {
-        System.out.println("Name: " + name + ", Price: " + price + ", Food: " + analog + ", Date: " + date + ", Expires: " + expires);
+        System.out.println("Name: " + Name + ", Price: " + Price + ", Food: " + Analog + ", Date: " + Date + ", Expires: " + Expires);
     }
 }
