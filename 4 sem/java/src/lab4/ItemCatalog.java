@@ -1,5 +1,6 @@
 package lab4;
 
+import lab3.Food;
 import lab3.Item;
 
 import java.util.ArrayList;
