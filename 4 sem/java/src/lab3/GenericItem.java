@@ -1,31 +1,23 @@
 package lab3;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class GenericItem
 {
     public static void main(String[] args)
     {
-        Item first = new Item();
-        Item second = new Item();
-        Item third = new Item();
+        Item first = new Item("Protein", 100.5F, Category.FOOD);
+        Item second = new Item("HQD Titan", 1050F, Category.OTHER);
+        Food third = new Food("Fish", 300.2F, (Food) null, LocalDate.now(), (short) 13);
+        Food fourth = new Food(third.Name, third.Price, third, LocalDate.now(), third.Expires);
 
-        first.ID = 1;
-        first.Name = "Protein";
-        first.Price = 100.5F;
-        first.Category = Category.FOOD;
         first.printAll();
-
-        second.ID = 2;
-        second.Name = "HQD Titan";
-        second.Price = 1050F;
-        second.Category = Category.OTHER;
         second.printAll();
-
-        third.ID = 3;
-        third.Name = "Milk";
-        third.Price = 120.33F;
         third.printAll();
+        fourth.printAll();
     }
 }
 
@@ -33,17 +25,17 @@ class Item
 {
     public lab3.Category Category;
 
-    public Item(int id, String name, float price, Category category)
+    public Item(String name, float price, Category category)
     {
-        ID = id;
+        this.ID = Item.CurrentID++;
         Name = name;
         Price = price;
         CurrentCategory = category;
     }
 
-    public Item(int id, String name, float price, Item analog)
+    public Item(String name, float price, Item analog)
     {
-        ID = id;
+        this.ID = Item.CurrentID++;
         Name = name;
         Price = price;
         CurrentCategory = analog.CurrentCategory;
@@ -52,20 +44,21 @@ class Item
     public Item()
     { }
 
+    public static int CurrentID = 0;
     public int ID;
     public String Name;
     public float Price;
     public Category CurrentCategory = lab3.Category.OTHER;
-    public static int currentID;
     void printAll()
     {
-        System.out.println("ID: " + ID + ", Name: " + Name + ", Price: " + Price + ", Category: " + CurrentCategory);
+        System.out.println("ID: " + CurrentID + ", Name: " + Name + ", Price: " + Price + ", Category: " + CurrentCategory);
     }
 }
 
+
 class Food
 {
-    public Food(String name, float price, Food analog, Date date, short expires)
+    public Food(String name, float price, Food analog, LocalDate date, short expires)
     {
         Name = name;
         Price = price;
@@ -89,7 +82,7 @@ class Food
     public String Name;
     public float Price;
     public Food Analog;
-    public Date Date;
+    public LocalDate Date;
     public short Expires;
     void printAll()
     {
