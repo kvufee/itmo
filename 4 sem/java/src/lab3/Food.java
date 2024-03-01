@@ -25,11 +25,52 @@ public class Food
         this.Name = name;
     }
 
-    public String Name;
-    public float Price;
-    public Food Analog;
-    public LocalDate Date;
-    public short Expires;
+    private String Name;
+    private float Price;
+    private Food Analog;
+    private LocalDate Date;
+    private short Expires;
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public float getPrice() {
+        return Price;
+    }
+
+    public void setPrice(float price) {
+        Price = price;
+    }
+
+    public Food getAnalog() {
+        return Analog;
+    }
+
+    public void setAnalog(Food analog) {
+        Analog = analog;
+    }
+
+    public LocalDate getDate() {
+        return Date;
+    }
+
+    public void setDate(LocalDate date) {
+        Date = date;
+    }
+
+    public short getExpires() {
+        return Expires;
+    }
+
+    public void setExpires(short expires) {
+        Expires = expires;
+    }
+
     void printAll()
     {
         System.out.println("Name: " + Name + ", Price: " + Price + ", Food: " + Analog + ", Date: " + Date + ", Expires: " + Expires);
