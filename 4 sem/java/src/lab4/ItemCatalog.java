@@ -13,7 +13,7 @@ public class ItemCatalog
 
     public void addItem(Item item)
     {
-        catalog.put(item.ID, item);
+        catalog.put(item.getID(), item);
         ALCatalog.add(item);
     }
 
@@ -41,7 +41,7 @@ public class ItemCatalog
     {
         for(Item i : ALCatalog)
         {
-            if(i.ID==id) return i;
+            if(i.getID()==id) return i;
         }
 
         return null;
@@ -54,7 +54,7 @@ public class ItemCatalog
         for (int i = 0; i < 10; i++)
         {
             Item item = new Item();
-            item.ID = i;
+            item.getID() = i;
             catalog.addItem(item);
         }
 
