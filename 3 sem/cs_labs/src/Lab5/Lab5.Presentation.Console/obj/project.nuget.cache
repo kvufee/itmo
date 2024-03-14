@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "vFq7ggRkRlzH4Pj3mm89BQOwhGYWpapdwjcTF5gl1ZbOKYWQiTmB9FLu9PXtJzD+DQ2+xzko0L9S93C1gfUfbQ==",
+  "success": true,
+  "projectFilePath": "/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Console/Lab5.Presentation.Console.csproj",
+  "expectedPackageFiles": [
+    "/home/wibbleydock/.nuget/packages/sourcekit.analyzers.collections/1.0.4/sourcekit.analyzers.collections.1.0.4.nupkg.sha512",
+    "/home/wibbleydock/.nuget/packages/sourcekit.analyzers.enumerable/1.0.4/sourcekit.analyzers.enumerable.1.0.4.nupkg.sha512",
+    "/home/wibbleydock/.nuget/packages/sourcekit.analyzers.memberaccessibility/1.0.4/sourcekit.analyzers.memberaccessibility.1.0.4.nupkg.sha512",
+    "/home/wibbleydock/.nuget/packages/sourcekit.analyzers.nullable/1.0.4/sourcekit.analyzers.nullable.1.0.4.nupkg.sha512",
+    "/home/wibbleydock/.nuget/packages/sourcekit.analyzers.properties/1.0.4/sourcekit.analyzers.properties.1.0.4.nupkg.sha512",
+    "/home/wibbleydock/.nuget/packages/stylecop.analyzers/1.2.0-beta.507/stylecop.analyzers.1.2.0-beta.507.nupkg.sha512",
+    "/home/wibbleydock/.nuget/packages/stylecop.analyzers.unstable/1.2.0.507/stylecop.analyzers.unstable.1.2.0.507.nupkg.sha512"
+  ],
+  "logs": []
+}

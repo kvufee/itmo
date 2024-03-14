@@ -1,0 +1,13 @@
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/bin/Debug/net7.0/Lab5.Presentation.Abstractions.deps.json
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/bin/Debug/net7.0/Lab5.Presentation.Abstractions.dll
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/bin/Debug/net7.0/Lab5.Presentation.Abstractions.pdb
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/bin/Debug/net7.0/Lab5.Presentation.Abstractions.xml
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/Lab5.Presentation.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/Lab5.Presentation.Abstractions.AssemblyInfoInputs.cache
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/Lab5.Presentation.Abstractions.AssemblyInfo.cs
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/Lab5.Presentation.Abstractions.csproj.CoreCompileInputs.cache
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/Lab5.Presentation.Abstractions.dll
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/refint/Lab5.Presentation.Abstractions.dll
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/Lab5.Presentation.Abstractions.xml
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/Lab5.Presentation.Abstractions.pdb
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab5/Lab5.Presentation.Abstractions/obj/Debug/net7.0/ref/Lab5.Presentation.Abstractions.dll

@@ -1,0 +1,13 @@
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/bin/Debug/net7.0/Lab1.deps.json
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/bin/Debug/net7.0/Lab1.dll
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/bin/Debug/net7.0/Lab1.pdb
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/bin/Debug/net7.0/Lab1.xml
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/Lab1.GeneratedMSBuildEditorConfig.editorconfig
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/Lab1.AssemblyInfoInputs.cache
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/Lab1.AssemblyInfo.cs
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/Lab1.csproj.CoreCompileInputs.cache
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/Lab1.dll
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/refint/Lab1.dll
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/Lab1.xml
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/Lab1.pdb
+/home/wibbleydock/projects/cs_labs/kvufee/src/Lab1/obj/Debug/net7.0/ref/Lab1.dll
