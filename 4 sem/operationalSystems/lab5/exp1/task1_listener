@@ -1,0 +1,22 @@
+#!/bin/bash
+
+print_system_memory() {
+    top -bn1 | head -n 4 | tail -n 2
+}
+
+print_top_processes_changes() {
+    top -bn1 | tail -n +8 | head -n 5
+}
+
+while true; do
+    echo "System Memory Stats:" >> report_addition.log
+    print_system_memory >> report_addition.log
+    echo "Top Processes Changes:"  >> report_addition.log
+    print_top_processes_changes >> report_addition.log
+
+    echo " " >> report1.log
+    echo " " >> report1.log
+    echo " " >> report1.log
+    
+    sleep 3
+done
