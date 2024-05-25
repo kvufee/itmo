@@ -1,3 +1,755 @@
 1 эксперимент 2 этап
 
+System Memory Stats:
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1533.8 free,    129.1 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  225024   5652   2992 R  43.8   0.3   0:00.11 mem.bash
+ 2983 root      20   0  225156   5920   3000 R  43.8   0.3   0:00.11 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1466.4 free,    196.5 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  260532  41028   2992 R  56.2   2.2   0:01.76 mem.bash
+ 2983 root      20   0  260136  40768   3000 R  43.8   2.2   0:01.75 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 20.0 hi, 20.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1398.2 free,    264.7 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  294984  75612   2992 R  38.9   4.1   0:03.38 mem.bash
+ 2983 root      20   0  294456  75088   3000 R  27.8   4.0   0:03.36 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 20.0 us, 40.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 20.0 hi, 20.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1337.0 free,    326.0 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  326400 107032   3000 R  43.8   5.8   0:04.98 mem2.bash
+ 2991 root      20   0  326136 106764   2992 R  37.5   5.7   0:04.97 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us, 33.3 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1270.1 free,    392.8 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  360324 141088   3000 R  44.4   7.6   0:06.60 mem2.bash
+ 2991 root      20   0  360456 141084   2992 R  33.3   7.6   0:06.59 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us, 16.7 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi, 16.7 si,  0.0 st
+MiB Mem :   1817.2 total,   1201.6 free,    461.4 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  395700 176460   2992 R  44.4   9.5   0:08.26 mem.bash
+ 2983 root      20   0  395568 176200   3000 R  44.4   9.5   0:08.25 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1132.9 free,    530.0 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  430680 211308   2992 R  52.9  11.4   0:09.90 mem.bash
+ 2983 root      20   0  430416 211048   3000 R  35.3  11.3   0:09.88 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 20.0 hi, 20.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1065.0 free,    598.0 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  465000 245628   2992 R  41.2  13.2   0:11.51 mem.bash
+ 2983 root      20   0  465396 246160   3000 R  41.2  13.2   0:11.52 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 50.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    997.0 free,    665.9 used,    154.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  499848 280476   2992 R  53.3  15.1   0:13.16 mem.bash
+ 2983 root      20   0  499848 280480   3000 R  40.0  15.1   0:13.14 mem2.bash
+     26 root      39  19       0      0      0 S   6.7   0.0   0:00.36 khugepaged
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 20.0 us, 40.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 20.0 hi, 20.0 si,  0.0 st
+MiB Mem :   1817.2 total,    927.9 free,    734.6 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  533904 314536   3000 R  43.8  16.9   0:14.73 mem2.bash
+ 2991 root      20   0  533376 314004   2992 R  37.5  16.9   0:14.72 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.24 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 20.0 hi, 20.0 si,  0.0 st
+MiB Mem :   1817.2 total,    861.9 free,    800.5 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  568620 349120   3000 R  47.1  18.8   0:16.36 mem2.bash
+ 2991 root      20   0  568224 348852   2992 R  41.2  18.7   0:16.36 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    793.5 free,    868.9 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  603072 383700   2992 R  41.2  20.6   0:17.99 mem.bash
+ 2983 root      20   0  603732 384232   3000 R  41.2  20.6   0:18.00 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi, 25.0 si,  0.0 st
+MiB Mem :   1817.2 total,    724.4 free,    938.0 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  638448 419076   2992 R  56.2  22.5   0:19.65 mem.bash
+ 2983 root      20   0  638712 419344   3000 R  37.5  22.5   0:19.63 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    657.5 free,   1004.9 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  672504 453132   2992 R  43.8  24.4   0:21.27 mem.bash
+ 2983 root      20   0  673164 453928   3000 R  43.8  24.4   0:21.26 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    589.4 free,   1073.0 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  708276 489040   3000 R  50.0  26.3   0:22.91 mem2.bash
+ 2991 root      20   0  707088 487716   2992 R  37.5  26.2   0:22.89 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 66.7 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    521.8 free,   1140.6 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  742728 523360   3000 R  53.3  28.1   0:24.52 mem2.bash
+ 2991 root      20   0  741672 522300   2992 R  40.0  28.1   0:24.52 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 20.0 hi, 20.0 si,  0.0 st
+MiB Mem :   1817.2 total,    453.5 free,   1209.0 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  777972 558472   3000 R  47.4  30.0   0:26.17 mem2.bash
+ 2991 root      20   0  776652 557148   2992 R  31.6  29.9   0:26.15 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    385.3 free,   1277.1 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  813084 593584   3000 R  42.1  31.9   0:27.81 mem2.bash
+ 2991 root      20   0  811632 592260   2992 R  36.8  31.8   0:27.79 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us, 33.3 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    316.5 free,   1346.0 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  846744 627372   2992 R  41.2  33.7   0:29.43 mem.bash
+ 2983 root      20   0  847668 628168   3000 R  41.2  33.8   0:29.43 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 25.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi, 25.0 si,  0.0 st
+MiB Mem :   1817.2 total,    247.8 free,   1414.7 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  881856 662484   2992 R  41.2  35.6   0:31.07 mem.bash
+ 2983 root      20   0  882648 663280   3000 R  41.2  35.6   0:31.07 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 40.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    179.7 free,   1482.8 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  916704 697332   2992 R  38.9  37.5   0:32.71 mem.bash
+ 2983 root      20   0  917892 698392   3000 R  38.9  37.5   0:32.71 mem2.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 25.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 50.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    110.9 free,   1551.6 used,    154.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0  952872 733504   3000 R  44.4  39.4   0:34.36 mem2.bash
+ 2991 root      20   0  951552 732180   2992 R  38.9  39.3   0:34.34 mem.bash
+      1 root      20   0  183236   6720   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 40.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     67.0 free,   1621.9 used,    128.3 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0  988380 768876   2992 R  33.3  41.3   0:36.06 mem.bash
+ 2983 root      20   0  989436 770200   3000 R  33.3  41.4   0:36.06 mem2.bash
+     49 root      20   0       0      0      0 S   5.6   0.0   0:02.49 kswapd0
+      1 root      20   0  183236   6700   4204 S   0.0   0.4   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     71.4 free,   1688.0 used,     57.8 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0 1027188 807496   2808 R  43.8  43.4   0:37.84 mem2.bash
+ 2991 root      20   0 1026000 806456   2820 R  37.5  43.3   0:37.83 mem.bash
+     49 root      20   0       0      0      0 S   6.2   0.0   0:02.57 kswapd0
+      1 root      20   0  183236   5724   3260 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 25.0 us, 37.5 sy,  0.0 ni,  0.0 id,  0.0 wa, 37.5 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     75.7 free,   1689.9 used,     51.5 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1064280 764632   2760 R  44.4  41.1   0:39.63 mem.bash
+ 2983 root      20   0 1064808 845056   2764 R  38.9  45.4   0:39.62 mem2.bash
+      1 root      20   0  183236   5008   2544 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 66.7 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     71.7 free,   1694.2 used,     51.3 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1099260 745820   2760 R  44.4  40.1   0:41.28 mem.bash
+ 2983 root      20   0 1099920 865832   2764 R  38.9  46.5   0:41.27 mem2.bash
+      1 root      20   0  183236   4916   2452 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     62.3 free,   1703.4 used,     51.4 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1134372 735156   2760 R  38.9  39.5   0:42.92 mem.bash
+ 2983 root      20   0 1135164 869152   2764 R  38.9  46.7   0:42.93 mem2.bash
+      1 root      20   0  183236   5812   3336 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 20.0 hi, 20.0 si,  0.0 st
+MiB Mem :   1817.2 total,     68.5 free,   1699.2 used,     49.5 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2983 root      20   0 1169088 859032   2760 R  43.8  46.2   0:44.52 mem2.bash
+ 2991 root      20   0 1168032 741480   2760 R  37.5  39.8   0:44.51 mem.bash
+     49 root      20   0       0      0      0 R   6.2   0.0   0:02.78 kswapd0
+      1 root      20   0  183236   5672   3196 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us, 33.3 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     74.9 free,   1694.8 used,     47.5 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1203144 747784   2756 R  50.0  40.2   0:46.17 mem.bash
+ 2983 root      20   0 1203672 864388   2760 R  37.5  46.5   0:46.15 mem2.bash
+      1 root      20   0  183236   5592   3116 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      
+       
+System Memory Stats:
+%Cpu(s): 35.3 us, 23.5 sy,  0.0 ni,  0.0 id,  0.0 wa, 35.3 hi,  5.9 si,  0.0 st
+MiB Mem :   1817.2 total,    865.5 free,    897.9 used,     53.8 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1335332 801452   1456 R  88.2  43.1   0:57.15 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 40.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    790.2 free,    967.0 used,     60.0 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1402388 868808   1776 R  94.1  46.7   1:00.38 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    724.0 free,   1033.1 used,     60.0 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1569840 936392   1776 R  87.5  50.3   1:03.57 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 66.7 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    657.7 free,   1099.4 used,     60.0 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1637688 980.4m   1776 R  87.5  54.0   1:06.79 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 66.7 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    591.1 free,   1166.0 used,     60.1 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1705668   1.0g   1776 R  87.5  57.6   1:10.00 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us, 33.3 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    524.9 free,   1232.2 used,     60.1 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1773384   1.1g   1776 R  76.5  61.3   1:13.19 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 66.7 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    457.7 free,   1299.4 used,     60.1 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1842024   1.2g   1776 R  93.3  64.9   1:16.42 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    390.3 free,   1366.7 used,     60.2 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1910796   1.2g   1776 R  93.3  68.6   1:19.64 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us, 33.3 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    323.5 free,   1433.3 used,     60.3 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 1979172   1.3g   1776 R  88.2  72.3   1:22.86 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    257.0 free,   1499.8 used,     60.3 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2047152   1.3g   1776 R  87.5  76.0   1:26.06 mem2.bash
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 66.7 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    190.4 free,   1566.5 used,     60.3 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2115528   1.4g   1776 R  94.1  79.6   1:29.28 mem2.bash
+ 150980 root      20   0       0      0      0 I   5.9   0.0   0:00.94 kworker/0+
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,    122.6 free,   1634.3 used,     60.3 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2134696   1.5g   1776 R  88.9  83.4   1:32.53 mem2.bash
+ 151087 root      20   0  275188    668      0 S   5.6   0.0   0:00.81 top
+      1 root      20   0  183236   4980   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      
+      System Memory Stats:
+%Cpu(s): 33.3 us,  0.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 66.7 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     75.1 free,   1682.0 used,     60.1 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2252676   1.5g   1788 R  82.4  85.9   1:35.72 mem2.bash
+      1 root      20   0  183236   4968   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 33.3 us, 33.3 sy,  0.0 ni,  0.0 id,  0.0 wa, 33.3 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     69.0 free,   1690.2 used,     58.0 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2319204   1.5g   1788 R  93.8  86.3   1:38.85 mem2.bash
+      1 root      20   0  183236   4948   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 40.0 us, 20.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 40.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     61.9 free,   1699.6 used,     55.7 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2386392   1.5g   1788 R  78.9  85.6   1:42.01 mem2.bash
+      1 root      20   0  183236   4916   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     72.9 free,   1691.9 used,     52.4 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2453052   1.5g   1788 R  93.8  86.1   1:45.15 mem2.bash
+      1 root      20   0  183236   4888   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s): 50.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa, 25.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,     74.0 free,   1692.2 used,     51.0 buff/cache
+Script Stats:
+Top Processes Changes:
+ 2991 root      20   0 2524068   1.5g   1788 R  87.5  85.9   1:48.47 mem2.bash
+      1 root      20   0  183236   4856   2552 S   0.0   0.3   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s):  0.0 us,  5.6 sy,  0.0 ni, 83.3 id,  5.6 wa,  5.6 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1645.8 free,    116.0 used,     55.3 buff/cache
+Script Stats:
+Top Processes Changes:
+      1 root      20   0  183236   2288      0 S   0.0   0.1   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0+
+ 
+ 
+ 
+ 
+ 
+System Memory Stats:
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1817.2 total,   1641.6 free,    116.0 used,     59.6 buff/cache
+Script Stats:
+Top Processes Changes:
+      1 root      20   0  183236   2288      0 S   0.0   0.1   0:01.25 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0+
+
+[ 4552.020044] [   2983]  1000  2983  1851074   783008 14454784  1012736           200 mem.bash
+[ 4552.020048] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-e6fbf858-d07f-4074-8214-0108b124f5f0.scope,task=mem.bash,pid=2983,uid=1000
+[ 4552.020081] Out of memory: Killed process 2983 (mem.bash) total-vm:7404296kB, anon-rss:3130240kB, file-rss:1792kB, shmem-rss:0kB, UID:1000 pgtables:14116kB oom_score_adj:200
+[ 4552.020044] [   2991]  1000  2991  1851074   783008 14454784  1012736           200 mem2.bash
+[ 4552.020048] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-e6fbf858-d07f-4074-8214-0108b124f5f0.scope,task=mem.bash,pid=2991,uid=1000
+[ 4552.020081] Out of memory: Killed process 2991 (mem.bash) total-vm:7404296kB, anon-rss:3130240kB, file-rss:1792kB, shmem-rss:0kB, UID:1000 pgtables:14116kB oom_score_adj:200
+
+arr size: 1000000
+arr size: 2000000
+arr size: 3000000
+arr size: 4000000
+arr size: 5000000
+arr size: 6000000
+arr size: 7000000
+arr size: 8000000
+arr size: 9000000
+arr size: 10000000
+arr size: 11000000
+arr size: 12000000
+arr size: 13000000
+
+arr size: 1000000
+arr size: 2000000
+arr size: 3000000
+arr size: 4000000
+arr size: 5000000
+arr size: 6000000
+arr size: 7000000
+arr size: 8000000
+arr size: 9000000
+arr size: 10000000
+arr size: 11000000
+arr size: 12000000
+arr size: 13000000
+arr size: 14000000
+arr size: 15000000
+arr size: 16000000
+arr size: 17000000
+arr size: 18000000
+arr size: 19000000
+arr size: 20000000
+arr size: 21000000
+arr size: 22000000
+arr size: 23000000
+arr size: 24000000

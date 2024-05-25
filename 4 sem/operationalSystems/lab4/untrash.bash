@@ -1,7 +1,7 @@
 #!/bin/bash
 
 home=$HOME
-parameter=$1
+parameter="$1"
 logfile="$home/.trash.log"
 trash_dir="$home/.trash"
 
@@ -36,7 +36,8 @@ fi
 
 while read -r entry; do
     full_path=$(echo "$entry" | cut -d' ' -f1)
-    hardlink=$(echo "$entry" | cut -d' ' -f2)
+    hardlink=$(echo "$entry" | cut -d' ' -f1-2)
+    echo $hardlink
     dir_name=$(dirname "$full_path")
     base_name=$(basename "$full_path")
 
@@ -45,13 +46,13 @@ while read -r entry; do
         echo "papki net idi domoy"
     fi
 
-    if ln "$home/.trash/$hardlink" "$dir_name/$base_name"; then
-        rm "$home/.trash/$hardlink"
+    if ln $home/.trash/"$hardlink" "$dir_name/$base_name"; then
+        rm $home/.trash/"$hardlink"
     else
         echo "imya plohoe"
         read -p "novoe imya: " new_name
-        ln "$home/.trash/$hardlink" "$dir_name/$new_name"
-        rm "$home/.trash/$hardlink"
+        ln $home/.trash/"$hardlink" "$dir_name/$new_name"
+        rm $home/.trash/"$hardlink"
     fi
 done <<< "$entries"
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 home="$HOME"
-parameter=$1
+parameter="$1"
 log="$home/.trash.log"
 trash_dir="$home/.trash"
 
@@ -28,5 +28,5 @@ hardlink=$(date +%s%N)
 ln "$parameter" "$trash_dir/$hardlink"
 rm "$parameter"
 
-echo "$(realpath $parameter) $hardlink" >> "$log"
+echo "$(realpath "$parameter") $hardlink" >> "$log"
 echo "'$parameter' udalen"

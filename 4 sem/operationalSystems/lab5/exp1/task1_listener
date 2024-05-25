@@ -14,9 +14,9 @@ while true; do
     echo "Top Processes Changes:"  >> report_addition.log
     print_top_processes_changes >> report_addition.log
 
-    echo " " >> report1.log
-    echo " " >> report1.log
-    echo " " >> report1.log
+    echo " " >> report_addition.log
+    echo " " >> report_addition.log
+    echo " " >> report_addition.log
     
     sleep 3
 done

@@ -2,13 +2,7 @@
 
 При N=$((29999990 / 10)) и K = 10 аварийно не был завершен ни один процесс.
 
-
-
-
-
-
 При таком же N и K = 30 аварийно был заверешен ряд процессов.
-
 
 
 [32292.365494] newmem.bash invoked oom-killer: gfp_mask=0x6200ca(GFP_HIGHUSER_MOVABLE), order=0, oom_score_adj=0
@@ -345,11 +339,6 @@
 [32424.512844] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-0.slice/session-23.scope,task=newmem.bash,pid=152241,uid=0
 [32424.513128] Out of memory: Killed process 152241 (newmem.bash) total-vm:448236kB, anon-rss:150420kB, file-rss:0kB, shmem-rss:0kB, UID:0 pgtables:520kB oom_score_adj:0
 [32424.522748] oom_reaper: reaped process 152241 (newmem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
-
-
-
-
-
 
 ./newmem.bash: ./newmem.bash: xmalloc: cannot allocate 32 bytes
 ./newmem.bash: xmalloc: cannot allocate 32 bytes
