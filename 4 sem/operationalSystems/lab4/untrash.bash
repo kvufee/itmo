@@ -35,8 +35,8 @@ if [ "$answer" != "y" ]; then
 fi
 
 while read -r entry; do
-    full_path=$(echo "$entry" | cut -d' ' -f1)
-    hardlink=$(echo "$entry" | cut -d' ' -f1-2)
+    full_path=$(echo "$entry" | awk '{$NF=""; print $0}' | sed 's/ $//')
+    hardlink=$(echo "$entry" | awk '{print $NF}')
     echo $hardlink
     dir_name=$(dirname "$full_path")
     base_name=$(basename "$full_path")
