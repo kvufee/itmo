@@ -8,3 +8,4 @@ CMakeLists.txt
 !**/src/test/**/out/
 /4\ sem/java/java.iml
 /4\ sem/java/.gitignore
+/4\ sem/.ipynb_checkpoints/
