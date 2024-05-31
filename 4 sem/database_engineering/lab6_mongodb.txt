@@ -1,0 +1,144 @@
+db.createCollection("Users", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["_id", "name", "phoneNumber", "email", "subscriptionId"],
+            properties: {
+                _id: { bsonType: "int" },
+                userName: { bsonType: "string" },
+                phoneNumber: { bsonType: "string"},
+                email: { bsonType: "string"},
+                subscriptionId: { bsonType: "int"}
+            }
+        }
+    }
+})
+db.createCollection("Payments", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["_id", "subscriptionId", "status", "price", "method"],
+            properties: {
+                _id: { bsonType: "int" },
+                subscriptionId: { bsonType: "int" },
+                status: { bsonType: "string" },
+                price: { bsonType: "int" },
+                method: { bsonType: "string"}
+            }
+        }
+    }
+})
+db.createCollection("Subscriptions", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["_id", "userId", "price", "gymId", "validUntil", "paymentId"],
+            properties: {
+                _id: { bsonType: "int" },
+                userId: { bsonType: "int" },
+                price: { bsonType: "int" },
+                gymId: { bsonType: "int" },
+                validUntil: { bsonType: "string" },
+                paymentId: { bsonType: "int" }
+            }
+        }
+    }
+})
+db.createCollection("Employees", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["_id", "userId", "gymId", "salary"],
+            properties: {
+                _id: { bsonType: "int" },
+                userId: { bsonType: "int" },
+                gymId: { bsonType: "int" },
+                salary : {bsonType: "int" }
+            }
+        }
+    }
+})
+db.createCollection("Gyms", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["_id", "city", "contacts", "amountOfPeople"],
+            properties: {
+                _id: { bsonType: "int" },
+                city: { bsonType: "string" },
+                contacts: { bsonType: "string" },
+                amountOfPeople: { bsonType: "int" }
+            }
+        }
+    }
+})
+db.createCollection("GroupTrainings", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["_id", "gymId", "employeeId", "maxPeople", "time"],
+            properties: {
+                _id: { bsonType: "int" },
+                gymId: { bsonType: "int" },
+                employeeId: { bsonType: "int" },
+                maxPeople: { bsonType: "int" },
+                time: { bsonType: "string" }
+            }
+        }
+    }
+})
+db.createCollection("SubscriptionsList", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["userId", "subscriptionId"],
+            properties: {
+                userId: { bsonType: "int" },
+                subscriptionId: { bsonType: "int" }
+            }
+        }
+    }
+})
+db.Users.insertMany([
+    { _id: 1, name: 'Bob Bobikov', phoneNumber: '78989898989', email: 'abcdefg@lmfao.ru', subscriptionId: 1 },
+    { _id: 2, name: 'Kyle Jenaaer', phoneNumber: '7893213', email: 'abcdedfgdfgfg@lmfao.ru', subscriptionId: 2 },
+    { _id: 3, name: 'Bob Bobikov', phoneNumber: '78989898989', email: 'abcdef55g@lmfao.ru', subscriptionId: 3 }
+])
+db.Payments.insertMany([
+    { _id: 1, subscriptionId: 1, status: 'Paid', price: 10000, method: 'card' },
+    { _id: 2, subscriptionId: 2, status: 'Paid', price: 10000, method: 'card' },
+    { _id: 3, subscriptionId: 3, status: 'Paid', price: 10000, method: 'card' }
+])
+db.Subscriptions.insertMany([
+    { _id: 1, userId: 1, price: 10000, gymId: 1, validUntil: '12-12-2024, paymentId: 1 },
+    { _id: 2, userId: 1, price: 15000, gymId: 1, validUntil: '13-12-2024, paymentId: 2 },
+    { _id: 3, userId: 1, price: 20000, gymId: 2, validUntil: '14-12-2024, paymentId: 3 }
+])
+db.Employees.insertMany([
+    { _id: 1, userId: 1, gymId: 1 , salary: 25000 },
+    { _id: 2, userId: 2, gymId: 2 , salary: 25000 },
+])
+db.Gyms.insertMany([
+    { _id: 1, city: 'Saint-Petersburg', contacts: '798432185423', amountOfPeople: '1000' },
+    { _id: 2, name: 'Saint-Petersburg', contacts: '7984543534345', amountOfPeople: '500' } 
+])
+db.GroupTrainings.insertMany([
+    { _id: 1, gymId: 1, employeeId: 1, maxPeople: 10, time: '2024-05-15 10:00' },
+    { _id: 2, gymId: 1, employeeId: 1, maxPeople: 15, time: '2024-05-16 14:30' },
+    { _id: 3, gymId: 2, employeeId: 2, maxPeople: 20, time: '2024-05-17 11:15' }
+])
+db.SubscriptionsList.insertMany([
+    { userId: 1, subscriptionId: 1 },
+    { userId: 2, subscriptionId: 2 },
+    { userId: 3, subscriptionId: 3 }
+])
+db.Payments.createIndex({ status: 'Paid' }, { name: "idx_payment_status" });
+db.GroupTrainings.createIndex({ gymId: 1, employeeId: 1 }, { name: "idx_group_training_employee" });
+db.Employees.createIndex({ employeeId: 1, salary: 25000 }, { name: "idx_employee_salary" });
+
+
+//SET enable_seqscan = OFF;
+
+db.Payments.find({ status: 'Paid' }).explain("executionStats");
+db.GroupTrainings.find({ gymId: 1, employeeId: 1 }).explain("executionStats");
+

@@ -1,0 +1,11 @@
+CREATE INDEX idx_user_id ON lab2.users(id);
+CREATE INDEX idx_subscriptions_id ON lab2.subscriptions(id);
+
+CREATE VIEW user_payments AS
+    SELECT usr.id AS user_id, usr.name AS user_name, sn.id AS subscr_id, sn.gymid AS subscr_gymid
+    FROM lab2.users usr
+    JOIN lab2.payments pay ON usr.id = pay.userid
+    JOIN lab2.subscriptions sn ON pay.subscriptionid = sn.id;
+
+select * from user_payments where subscr_gymid = '1' or subscr_id = 1;
+

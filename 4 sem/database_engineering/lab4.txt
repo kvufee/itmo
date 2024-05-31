@@ -1,0 +1,21 @@
+create table "user" (id integer primary key generated always as identity,
+                  username text,
+                  name text,
+                  surname text,
+                  phoneNumber text,
+                  email text,
+                  birth date);
+
+create extension if not exists anon cascade;
+select anon.start_dynamic_masking();
+
+SECURITY LABEL FOR anon ON ROLE login IS 'MASKED';
+SECURITY LABEL FOR anon
+    ON COLUMN "user".phonenumber
+    IS 'MASKED WITH FUNCTION anon.random_int_between(1,100)';
+SECURITY LABEL FOR anon
+    ON COLUMN "user".email
+    IS 'MASKED WITH FUNCTION anon.fake_email()';
+
+SELECT * FROM mask."user";
+
