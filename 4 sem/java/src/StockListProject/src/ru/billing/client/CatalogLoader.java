@@ -1,26 +1,55 @@
 package ru.billing.client;
 
-import ru.billing.stocklist.Category;
+import ru.billing.exceptions.CatalogLoadException;
+import ru.billing.stocklist.FoodItem;
 import ru.billing.stocklist.ItemCatalog;
-import ru.billing.stocklist.TechnicalItem;
 
-public class CatalogLoader implements ICatalogLoader
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Date;
+import java.util.Scanner;
+
+public class CatalogLoader extends ItemCatalog implements ICatalogLoader
 {
-    @Override
-    public void load(ItemCatalog cat)
-    {
-        TechnicalItem item1 = new TechnicalItem("Sony TV", 23000, Category.OTHER);
-        TechnicalItem item2 = new TechnicalItem("Bread", 100, Category.FOOD);
+    private String _fileName;
 
-        cat.addItem(item1);
-        cat.addItem(item2);
+    public CatalogLoader()
+    {
+        this._fileName = fileName;
     }
 
-    public static void main(String[] args)
+    public void load(ItemCatalog cat) throws CatalogLoadException
     {
-        ItemCatalog cat = new ItemCatalog();
-        ICatalogLoader loader = new CatalogLoader();
-        loader.load(cat);
-        cat.printItems();
+        File f = new File(_fileName);
+        FileInputStream fis;
+        String line;
+
+        try
+        {
+            fis = new FileInputStream(f);
+            var s = new Scanner(fis);
+
+            while(s.hasNextLine())
+            {
+                line = s.nextLine();
+
+                if(line.length()==0) break;
+
+                String[] item_fld = line.split(";");
+                String name = item_fld[0];
+                float price = Float.parseFloat(item_fld[1]);
+                short expires = Short.parseShort(item_fld[2]);
+
+                FoodItem item = new FoodItem(name, price, null, new Date(), expires);
+
+                cat.addItem(item);
+            }
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+            throw new CatalogLoadException(e.getMessage());
+        }
     }
 }

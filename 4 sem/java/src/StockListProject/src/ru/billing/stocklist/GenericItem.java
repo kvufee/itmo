@@ -7,16 +7,32 @@ import java.util.Date;
 
 public class GenericItem
 {
-    public static void main(String[] args)
-    {
-        TechnicalItem first = new TechnicalItem("Protein", 100.5F, Category.FOOD);
-        TechnicalItem second = new TechnicalItem("HQD Titan", 1050F, Category.OTHER);
-        FoodItem third = new FoodItem("Fish", 300.2F, (FoodItem) null, LocalDate.now(), (short) 13);
-        FoodItem fourth = new FoodItem(third.getName(), third.getPrice(), third, LocalDate.now(), third.getExpires());
+    public int ID;
+    public String name;
+    public float price;
+    public Category category = Category.General;
+    public GenericItem analog;
+    public static int currentID = 0;
 
-        first.printAll();
-        second.printAll();
-        third.printAll();
-        fourth.printAll();
+    public GenericItem(String name, float price, Category category) {
+        this.ID = currentID++;
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+
+    public GenericItem(String name, float price, GenericItem analog) {
+        this.ID = currentID++;
+        this.name = name;
+        this.price = price;
+        this.analog = analog;
+    }
+
+    public GenericItem() {
+        this.ID = currentID++;
+    }
+
+    public void PrintAll() {
+        System.out.printf("ID: %d , Name: %-20s , price:%5.2f , category: %s\n", ID, name, price, category);
     }
 }

@@ -1,7 +1,7 @@
 package ru.billing.exceptions;
 
 public class CatalogLoadException extends Exception {
-    public CatalogLoadException(Throwable cause)
+    public CatalogLoadException(String cause)
     {
         super(cause);
     }
