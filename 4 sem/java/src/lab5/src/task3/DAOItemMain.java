@@ -9,7 +9,7 @@ public class DAOItemMain {
     {
         Item item1, item2;
 
-        String url = "jdbc:postgresql://localhost:6432/postgres";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
         String password = "postgres";
         String user = "postgres";
         Connection conn = null;
