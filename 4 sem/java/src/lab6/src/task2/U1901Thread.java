@@ -1,12 +1,12 @@
-package task2;
+package lab6.src.task2;
 
 public class U1901Thread extends Thread
 {
-    private Bank _bankWork;
+    private lab6.src.task2.Bank _bankWork;
     private int _intTrans;
     private long _lngSleep;
 
-    public U1901Thread(Bank bankWork, int intTrans, long lngSleep)
+    public U1901Thread(lab6.src.task2.Bank bankWork, int intTrans, long lngSleep)
     {
         this._bankWork = bankWork;
         this._intTrans = intTrans;

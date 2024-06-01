@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 public class Schema {
     public static void main(String[] args)
     {
-        String url = "jdbc:postgresql://localhost:6432/postgres";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
         String password = "postgres";
         String user = "postgres";
 

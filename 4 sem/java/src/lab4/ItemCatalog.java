@@ -54,7 +54,7 @@ public class ItemCatalog
         for (int i = 0; i < 10; i++)
         {
             Item item = new Item();
-            item.getID() = i;
+            item.setID(i);
             catalog.addItem(item);
         }
 

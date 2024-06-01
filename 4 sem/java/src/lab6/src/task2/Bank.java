@@ -1,4 +1,4 @@
-package task2;
+package lab6.src.task2;
 
 public class Bank
 {
