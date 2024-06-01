@@ -9,7 +9,7 @@ public class JDBCTest
 {
     public static void main(String[] args)
     {
-        String url = "jdbc:postgresql://localhost:6432/postgres";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
         String pwd = "postgres";
         String name = "postgres";
 

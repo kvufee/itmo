@@ -24,7 +24,7 @@ public class DAOItemMain {
             e.printStackTrace();
         }
 
-        DAOItemMod dao = new DAOItemMod();
+        DAOItemMode dao = new DAOItemMode();
 
         item1 = dao.searchById(1);
         item2 = dao.searchById(100);
